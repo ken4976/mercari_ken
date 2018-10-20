@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <title>Mercari</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="single-container">
+      <header class="single-header">
+        <h1 class="single-container__header__logo-position">
+          <%= link_to "https://www.mercari.com/jp/" do %>
+            <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?249128278", :alt => "mercari" %>
+          <% end %>
+        </h1>
+        <nav class="single-container__header__progress-bar signup-bar">
+          <ol class="progress-dots clearfix">
+            <li class="progress-dots__a-dot through">
+              会員情報
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot through"  >
+              電話番号認証
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot active">
+              住所入力
+              <div class="progress-status"></div>
+            </li>
+            <li class="progress-dots__a-dot">
+              支払い方法
+              <div class="progress-status"></div>
+            </li>
+            <li class="progress-dots__a-dot">
+              完了
+              <div class="progress-status-last"></div>
+            </li>
+          </ol>
+        </nav>
+      </header>
+      <main class="single-main">
+        <section class="l-single-container">
+          <h2 class="l-chapter-head">住所登録</h2>
+      　　<form action="" method="POST" class="l-single-inner" novalidate="novalidate">
+            <input type="hidden" name="__csrf_value" value="">
+            <input type="hidden" name="id" value="22624562">
+            <div class="l-single-content">
+
+              <div class="form-group">
+                <label for="name">お名前</label>
+                <span class="form-require">必須</span>
+                <input type="text" value="" name="family_name" placeholder="例）山田" class="input-default">
+                <input type="text" value="" name="first_name" placeholder="例）彩" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="name">お名前カナ</label>
+                <span class="form-require">必須</span>
+                <input type="text" value="" name="family_name_kana" placeholder="例）ヤマダ" class="input-default">
+                <input type="text" value="" name="first_name_kana" placeholder="例）アヤ" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="zip_code1">郵便番号</label>
+                <span class="form-require">必須</span>
+                <input type="m&quot;text&quot;" value="" name="zip_code1" placeholder="例）123-4567" maxlength="8" pattern="\d*" data-region="jp" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="prefecture">都道府県</label>
+                <span class="form-require">必須</span>
+                <div class="select-wrap">
+                  <select name="prefecture" class="select-default">
+                    <option value="北海道">北海道</option>
+                    <option value="青森県">青森県</option>
+                    <option value="岩手県">岩手県</option>
+                    <option value="宮城県">宮城県</option>
+                    <option value="秋田県">秋田県</option>
+                    <option value="山形県">山形県</option>
+                    <option value="福島県">福島県</option>
+                    <option value="茨城県">茨城県</option>
+                    <option value="栃木県">栃木県</option>
+                    <option value="群馬県">群馬県</option>
+                    <option value="埼玉県">埼玉県</option>
+                    <option value="千葉県">千葉県</option>
+                    <option value="東京都">東京都</option>
+                    <option value="神奈川県">神奈川県</option>
+                    <option value="新潟県">新潟県</option>
+                    <option value="富山県">富山県</option>
+                    <option value="石川県">石川県</option>
+                    <option value="福井県">福井県</option>
+                    <option value="山梨県">山梨県</option>
+                    <option value="長野県">長野県</option>
+                    <option value="岐阜県">岐阜県</option>
+                    <option value="静岡県">静岡県</option>
+                    <option value="愛知県">愛知県</option>
+                    <option value="三重県">三重県</option>
+                    <option value="滋賀県">滋賀県</option>
+                    <option value="京都府">京都府</option>
+                    <option value="大阪府">大阪府</option>
+                    <option value="兵庫県">兵庫県</option>
+                    <option value="奈良県">奈良県</option>
+                    <option value="和歌山県">和歌山県</option>
+                    <option value="鳥取県">鳥取県</option>
+                    <option value="島根県">島根県</option>
+                    <option value="岡山県">岡山県</option>
+                    <option value="広島県">広島県</option>
+                    <option value="山口県">山口県</option>
+                    <option value="徳島県">徳島県</option>
+                    <option value="香川県">香川県</option>
+                    <option value="愛媛県">愛媛県</option>
+                    <option value="高知県">高知県</option>
+                    <option value="福岡県">福岡県</option>
+                    <option value="佐賀県">佐賀県</option>
+                    <option value="長崎県">長崎県</option>
+                    <option value="熊本県">熊本県</option>
+                    <option value="大分県">大分県</option>
+                    <option value="宮崎県">宮崎県</option>
+                    <option value="鹿児島県">鹿児島県</option>
+                    <option value="沖縄県">沖縄県</option>
+                    <option value="未定">未定</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="city">市区町村</label>
+                <span class="form-require">必須</span>
+                <input type="text" value="" name="city" placeholder="例）横浜市緑区" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="address1_label">番地</label>
+                <span class="form-require">必須</span>
+                <input type="text" value="" name="address1" placeholder="例）青山1−1−1" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="address2_label">建物名</label>
+                <span class="form-arbitrary">任意</span>
+                <input type="text" value="" name="address2" placeholder="例）柳ビル103" class="input-default">
+              </div>
+
+              <div class="form-group">
+                <label for="address2_label">電話</label>
+                <span class="form-arbitrary">任意</span>
+                <input type="number" value="" name="telephone" placeholder="例）09012345678" class="input-default">
+              </div>
+
+              <!-- <input type="hidden" value="https://www.mercari.com/jp/mypage/deliver_address/" name="after_save_callback">
+              <button type="submit" class="btn-default btn-red">変更する</button> -->
+              <%= link_to '変更する', "/tests/credit_new/", class: "btn-default btn-red" %>
+            </div>
+          </form>
+        </section>
+      </div>
+
+    <footer class="single-footer">
+      <nav>
+        <ul class="single-footer__lists clearfix">
+            <li class="single-footer__lists__a-list">
+              <%=link_to 'プライバシーポリシー',  "https://www.mercari.com/jp/privacy/", class: "link-style" %>
+            </li>
+            <li class="single-footer__lists__a-list">
+              <%=link_to 'メルカリ利用規約', "https://www.mercari.com/jp/tos/", class: "link-style"  %>
+            </li>
+            <li class="single-footer__lists__a-list">
+              <%= link_to '特定商取引に関する表記', "https://www.mercari.com/jp/tokutei/", class: "link-style" %>
+            </li>
+          </ul>
+      </nav>
+      <%= link_to "https://www.mercari.com/jp/", class: "single-footer-logo" do %>
+          <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?249128278", :alt => "mercari", :width => "80", :height => "65" %>
+        <% end %>
+      <p>
+        <small>© 2018 Mercari</small>
+      </p>
+    </footer>
+  </div>
+　</body>
+</html>

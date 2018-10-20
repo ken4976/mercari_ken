@@ -1,0 +1,80 @@
+/*mypage/like/history*/
+
+.l-chapter-container {
+  &:first-child {
+    margin: 0;
+  }
+  margin: 40px 0 0;
+  background: #fff;
+}
+
+.l-chapter-head {
+  font-size: 24px;
+  padding: 8px 24px;
+  border-bottom: 1px solid #f5f5f5;
+  text-align: center;
+}
+
+.mypage-history {
+  margin: 40px 0 0;
+  height: 44px;
+}
+
+.pager {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+}
+
+.pager-prev {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.pager-next, .pager-next-fix {
+  position: absolute;
+  top: 0;
+}
+
+.pager-cell {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 42px;
+  a {
+    display: block;
+    color: #333;
+  }
+}
+
+.pager-prev i, .pager-next i {
+  position: relative;
+  top: .15em;
+}
+
+.pager-next-fix {
+  top: .15em;
+}
+
+.icon-arrow-left:before {
+  content: '\e004';
+}
+
+.pager-next, .pager-next-fix {
+  right: 0;
+}
+
+.pager-next-fix i {
+  margin-right: 0px;
+}
+
+.pager-next-fix ::before {
+  color: black;
+  font-size: 14px;
+}
+

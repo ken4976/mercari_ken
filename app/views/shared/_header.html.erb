@@ -1,0 +1,1911 @@
+<div class="row flex-container">
+<header class="pc-header visible-pc">
+  <div class="pc-header-inner">
+    <div class="clearfix">
+      <h1 class="l-left">
+        <%= link_to root_path do %>
+          <img src="https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2682216493" alt="mercari" width="134" height="36">
+        <% end %>
+      </h1>
+      <div class="x"></div>
+      <%= form_tag('/items/search', class: "pc-header-form l-right", method: :get) do %>
+        <input type="search" name="keyword" value="" placeholder="キーワードから探す" class="input-default">
+          <button class="btn-search" title="検索" type="submit">
+            <i class="icon-search"></i>
+          </button>
+        </input>
+        <!-- <div id="item-search-result"></div> -->
+      <% end %>
+    </div>
+
+    <div class="pc-header-nav-box clearfix">
+
+      <nav class="l-left">
+        <ul class="pc-header-nav">
+          <li>
+            <h2>
+              <a href="https://www.mercari.com/jp/category/" class="pc-header-nav-root">カテゴリー</a>
+            </h2>
+
+            <ul class="pc-header-nav-parent-wrap" data-mega="1">
+
+  <!--              大カテゴリ（親要素）：レディース    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/categories/1" do %>
+                  レディース<% end %>
+                </h3>
+
+  <!--              中カテゴリ（子要素）：トップス    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>トップス</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Tシャツ/カットソー(半袖/袖なし)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Tシャツ/カットソー(七分/長袖)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">シャツ/ブラウス(半袖/袖なし)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">シャツ/ブラウス(七分/長袖)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ポロシャツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キャミソール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">タンクトップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ホルターネック</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ニット/セーター</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">チュニック</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">カーディガン/ボレロ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アンサンブル</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベスト/ジレ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パーカー</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+
+  <!--              中カテゴリ（子要素）：ジャケット/アウター    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ジャケット/アウター</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">テーラードジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ノーカラージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Gジャン/デニムジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レザージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ダウンジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ライダースジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミリタリージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ダウンベスト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ジャンパー/ブルゾン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ポンチョ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロングコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トレンチコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ダッフルコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピーコート</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：パンツ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>パンツ</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">デニム/ジーンズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ショートパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">カジュアルパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハーフパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">チノパン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ワークパンツ/カーゴパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">クロップドパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サロペット/オーバーオール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">オールインワン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サルエルパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ガウチョパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：スカート    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>スカート</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミニスカート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ひざ丈スカート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロングスカート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キュロット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+
+  <!--              中カテゴリ（子要素）：ワンピース    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ワンピース</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミニワンピース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ひざ丈ワンピース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロングワンピース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+
+  <!--              中カテゴリ（子要素）：靴    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>靴</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハイヒール/パンプス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブーツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サンダル</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スニーカー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミュール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">モカシン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ローファー/革靴</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">フラットシューズ/バレエシューズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">長靴/レインシューズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ルームウェア/パジャマ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ルームウェア/パジャマ</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ルームウェア</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：レッグウェア    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>レッグウェア</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ソックス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スパッツ/レギンス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ストッキング/タイツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レッグウォーマー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：帽子    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>帽子</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ニットキャップ/ビーニー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンチング/ベレー帽</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キャップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キャスケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">麦わら帽子</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：バッグ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>バッグ</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンドバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トートバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">エコバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">リュック/バックパック</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボストンバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スポーツバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ショルダーバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">クラッチバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ポーチ/バニティ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボディバッグ/ウェストバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">マザーズバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">メッセンジャーバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ビジネスバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">旅行用バッグ/キャリーバッグ</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：アクセサリー    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>アクセサリー</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ネックレス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブレスレット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バングル/リストバンド</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">リング</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピアス(片耳用)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピアス(両耳用)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">イヤリング</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アンクレット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブローチ/コサージュ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">チャーム</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ヘアアクセサリー    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ヘアアクセサリー</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ヘアゴム/シュシュ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ヘアバンド/カチューシャ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ヘアピン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：小物    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>小物</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">長財布</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">折り財布</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">コインケース/小銭入れ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">名刺入れ/定期入れ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キーケース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キーホルダー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">手袋/アームカバー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンカチ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">マフラー/ショール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ストール/スヌード</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バンダナ/スカーフ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ネックウォーマー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サスペンダー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：時計    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>時計</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">腕時計(アナログ)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">腕時計(デジタル)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ラバーベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レザーベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">金属ベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+
+
+
+  <!--              大カテゴリ（親要素）：メンズ    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/categories/2" do %>
+                  メンズ<% end %>
+                </h3>
+
+  <!--              中カテゴリ（子要素）：トップス    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>トップス</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Tシャツ/カットソー(半袖/袖なし)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Tシャツ/カットソー(七分/長袖)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">シャツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ポロシャツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">タンクトップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ニット/セーター</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パーカー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">カーディガン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スウェット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ジャージ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベスト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ジャケット/アウター    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ジャケット/アウター</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">テーラードジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ノーカラージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">Gジャン/デニムジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レザージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ダウンジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ライダースジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミリタリージャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ナイロンジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">フライトジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ダッフルコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピーコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ステンカラーコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トレンチコート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">モッズコート</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：パンツ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>パンツ</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">デニム/ジーンズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ワークパンツ/カーゴパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スラックス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">チノパン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ショートパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ペインターパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サルエルパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">オーバーオール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：靴    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>靴</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スニーカー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サンダル</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブーツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">モカシン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ドレス/ビジネス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">長靴/レインシューズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">デッキシューズ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：バッグ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>バッグ</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ショルダーバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トートバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボストンバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">リュック/バックパック</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ウエストポーチ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボディーバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ドラムバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ビジネスバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トラベルバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">メッセンジャーバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">エコバッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：スーツ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>スーツ</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スーツジャケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スーツベスト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スラックス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">セットアップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：帽子    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>帽子</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キャップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ニットキャップ/ビーニー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンチング/ベレー帽</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キャスケット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サンバイザー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：アクセサリー    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>アクセサリー</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ネックレス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブレスレット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バングル/リストバンド</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">リング</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピアス(片耳用)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ピアス(両耳用)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アンクレット</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：小物    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>小物</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">長財布</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">折り財布</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">マネークリップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">コインケース/小銭入れ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">名刺入れ/定期入れ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キーケース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">キーホルダー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ネクタイ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">手袋</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンカチ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">マフラー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ストール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バンダナ</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：時計    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>時計</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">腕時計(アナログ)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">腕時計(デジタル)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ラバーベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レザーベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">金属ベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：水着    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>水着</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">一般水着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スポーツ用</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アクセサリー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：レッグウェア    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>レッグウェア</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ソックス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レギンス/スパッツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">レッグウォーマー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：アンダーウェア    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>アンダーウェア</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トランクス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボクサーパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：その他    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>その他</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+
+
+
+
+
+  <!--              大カテゴリ（親要素）：ベビー・キッズ    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/categories/3" do %>
+                  ベビー・キッズ<% end %>
+                </h3>
+              
+  <!--              中カテゴリ（子要素）：ベビー服(女の子用)  ~95cm    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ベビー服(女の子用)  ~95cm</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アウター</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スカート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ワンピース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビードレス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おくるみ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">下着/肌着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロンパース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ベビー服(男の子用)  ~95cm    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ベビー服(男の子用)  ~95cm</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アウター</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おくるみ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">下着/肌着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロンパース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ベビー服(男女兼用)  ~95cm    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ベビー服(男女兼用)  ~95cm</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アウター</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おくるみ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">下着/肌着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ロンパース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：キッズ服(女の子用) 100cm~    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>キッズ服(女の子用) 100cm~</a>
+
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">コート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ジャケット/上着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(Tシャツ/カットソー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(トレーナー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(チュニック)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(タンクトップ)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(その他)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スカート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ワンピース</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">セットアップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">フォーマル/ドレス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">和服</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：キッズ服(男の子用) 100cm~    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>キッズ服(男の子用) 100cm~</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">コート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ジャケット/上着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(Tシャツ/カットソー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(トレーナー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(その他)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">セットアップ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">フォーマル/ドレス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">和服</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">浴衣</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">甚平</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">水着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：キッズ服(男女兼用) 100cm~    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>キッズ服(男女兼用) 100cm~</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">コート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ジャケット/上着</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(Tシャツ/カットソー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(トレーナー)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トップス(その他)</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ボトムス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">パジャマ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：キッズ靴    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>キッズ靴</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スニーカー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サンダル</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ブーツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">長靴</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：子ども用ファッション小物    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>子ども用ファッション小物</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">靴下/スパッツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">帽子</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">エプロン</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">サスペンダー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">タイツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ハンカチ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バンダナ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベルト</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">マフラー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">傘</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">手袋</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">スタイ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">バッグ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：時計    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>おむつ/トイレ/バス</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おむつ用品</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おまる/補助便座</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">トレーニングパンツ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビーバス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">お風呂用品</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：外出/移動用品    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>外出/移動用品</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビーカー</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">抱っこひも/スリング</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">チャイルドシート</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：授乳/食事    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>授乳/食事</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ミルク</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビーフード</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビー用食器</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：ベビー家具/寝具/室内用品    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>ベビー家具/寝具/室内用品</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベッド</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">布団/毛布</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">イス</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">たんす</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：おもちゃ    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>おもちゃ</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">おふろのおもちゃ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">がらがら</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">オルゴール</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">ベビージム</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">手押し車/カタカタ</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">知育玩具</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+
+  <!--              中カテゴリ（子要素）：行事/記念品    -->
+                  <li class="pc-header-nav-child">
+                    <a href="#" class>行事/記念品</a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">お宮参り用品</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">お食い初め用品</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">アルバム</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">手形/足形</a>
+                      </li>
+                      <li class="pc-header-nav-grand-child">
+                        <a href="#">その他</a>
+                      </li>
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：インテリア・住まい・小物    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#" class>インテリア・住まい・小物</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：本・音楽・ゲーム    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#" class>本・音楽・ゲーム</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：コスメ・香水・美容    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#" class>コスメ・香水・美容</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：家電・スマホ・カメラ    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">家電・スマホ・カメラ</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：スポーツ・レジャー    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">スポーツ・レジャー</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：ハンドメイド    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">ハンドメイド</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：チケット    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">チケット</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：自動車・オートバイ    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">自動車・オートバイ</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+
+
+  <!--              大カテゴリ（親要素）：その他    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <a href="#">その他</a>
+                </h3>
+  <!--              中カテゴリ（子要素）：    -->
+                <ul class="pc-header-nav-child-wrap" data-mega="2">
+                  <li class="pc-header-nav-child">
+                    <a href="#"></a>
+  <!--              小カテゴリ（孫要素） -->
+                    <ul class="pc-header-nav-grand-child-wrap" data-mega="3">
+                    </ul>
+  <!--            / 小カテゴリ（孫要素） -->
+                  </li>
+  <!--            / 中カテゴリ（子要素） -->
+                </ul>
+              </li>
+  <!--            / 大カテゴリ（親要素） -->
+            </ul>
+          </li>
+
+          <li>
+            <h2>
+              <a href="https://www.mercari.com/jp/category/" class="pc-header-nav-root">ブランド</a>
+            </h2>
+
+            <ul class="pc-header-nav-parent-wrap" data-mega="1">
+
+  <!--              大ブランド（親要素）：シャネル    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/brands/1" do %>
+                  アー ヴェ ヴェ<% end %>
+                </h3>
+              </li>
+  <!--           /  大ブランド（親要素）    -->
+  <!--              大ブランド（親要素）：ナイキ    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/brands/28" do %>
+                  アーバン リサーチ<% end %>
+                </h3>
+              </li>
+  <!--           /  大ブランド（親要素）    -->
+  <!--              大ブランド（親要素）：ルイ ヴィトン    -->
+              <li class="pc-header-nav-parent">
+                <h3>
+                  <%= link_to "/brands/975" do %>
+                  エキュイトーキョー<% end %>
+                </h3>
+              </li>
+  <!--           /  大ブランド（親要素）    -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="l-right">
+        <% if user_signed_in? %>
+        <ul class="pc-header-user-nav">
+          <li>
+            <%= link_to user_path(current_user), class: "sp-header-user-icon pc-header-nav-root" do %>
+              <figure>
+                <div>
+                  <img src="https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage.png" alt="" width="32">
+                </div>
+              </figure>
+              <div>マイページ</div>
+              <% end %>
+
+            <div class="pc-header-user-box pc-header-mypage-box">
+              <div class="pc-header-mypage-state text-center">
+                <figure>
+                  <div>
+                    <img src="https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage.png" alt="" width="60">
+                  </div>
+                  <figcaption><%= current_user.nickname %></figcaption>
+                </figure>
+                <ul class="pc-header-mypage-review-listing">
+                  <li><a href="">評価: 2</a></li>
+                  <li><%= link_to listings_items_path do %>出品数: <%= current_user.selling_item_ids.length %><% end %></li>
+                </ul>
+                <ul class="pc-header-mypage-sales-point">
+                  <li>
+                    <a href="#" class="clearfix">
+                      <div class="l-left">売上金</div>
+                      <% t = 0 %> 
+                      <% current_user.sold_items.each do |a_price|%>
+                      <% t = a_price.benefit_from_selling.floor + t %>
+                      <% end %>
+                      <div class="l-right">¥ <%= number_with_delimiter(t) %><i class="fas fa-angle-right"></i></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="clearfix">
+                      <div class="l-left">ポイント</div>
+                      <div class="l-right">P 100<i class="fas fa-angle-right"></i></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="mypage-nav-list">
+                <li>
+                  <%= link_to like_history_user_path(current_user), class: "mypage-nav-list-item" do %> 
+                    いいね！一覧
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to listings_items_path, class: "mypage-nav-list-item" do %> 
+                    出品した商品 - 出品中
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to in_progress_items_path, class: "mypage-nav-list-item" do %> 
+                    出品した商品 - 取引中
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to completed_items_path, class: "mypage-nav-list-item" do %>
+                    出品した商品 - 売却済み
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to purchase_items_path, class: "mypage-nav-list-item" do %>
+                    購入した商品 - 取引中
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to purchased_items_path, class: "mypage-nav-list-item" do %>
+                    購入した商品 - 過去の取引
+                    <i class="fas fa-angle-right"></i>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li data-id="pc-header-user-nav" data-key="notification_list" data-url="https://www.mercari.com/jp/mypage/notification_and_todo_json/">
+            <%= link_to mains_notification_path, class: "pc-header-nav-root" do %>
+              <i class="icon-bell"></i>
+              <span>お知らせ</span>
+              <div class="pc-header-nav-count">
+                5
+              </div>
+            <% end %>
+
+<!--             お知らせ -->
+            <ul class="pc-header-user-box pc-header-notification-box mypage-item-list" data-id="pc-header-user-items">
+
+              <li>
+                <a href="https://www.mercari.com/jp/mypage/" class="mypage-item-link">
+                  <figure><img src="https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png"></figure>
+                  <div class="mypage-item-body">
+                    <div class="mypage-item-text">明日、クーポンの有効期限が切れます！タップして詳細を確認しましょう。</div>
+                      <time><i class="icon-time"></i><span>3 時間前</span></time>
+                  </div>
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.mercari.com/jp/transaction/order_status/m38566204988/" class="mypage-item-link">
+                  <figure><img src="https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage.png"></figure>
+                  <div class="mypage-item-body">
+                    <div class="mypage-item-text">myさんがあなたを評価しました。これで取引完了です。</div>
+                      <time><i class="icon-time"></i><span>7 時間前</span></time>
+                  </div>
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+<!--                 やることリスト -->
+          <li data-id="pc-header-user-nav" data-key="todo_list" data-url="https://www.mercari.com/jp/mypage/notification_and_todo_json/">
+            <%= link_to mains_todo_path, class: "pc-header-nav-root" do %>
+              <i class="icon-check"></i>
+              <span>やることリスト</span>
+              <div class="pc-header-nav-count">
+                1
+              </div>
+              <% end %>
+            <ul class="pc-header-user-box pc-header-todo-box mypage-item-list" data-id="pc-header-user-items">
+
+              <li class="mypage-item-not-found bold">現在、やることリストはありません</li>
+
+            </ul>
+          </li>
+        </ul>
+        <% else %>
+           <ul class="pc-header-login-nav">
+              <li>
+                <%= link_to 'ログイン', new_user_session_path, class: "sp-header-btn btn-red-a" %>
+              </li>
+              <li>
+                <%= link_to '新規会員登録',mains_account_path, class: "sp-header-btn header-signup" %>
+              </li>
+            </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
+</div>

@@ -1,0 +1,86 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">クレジットカード情報入力</h2>
+      <%= form_for @credit, html: {class: 'l-single-inner'} do |f| %>
+        <div class="l-single-content">
+          <div class="form-group">
+            <%= f.label :num, "カード番号" %>
+            <span class="form-require">必須</span>
+            <%= f.text_field :num, autofocus: true, class: 'input-default', placeholder: "半角数字のみ", maxlength: "19" %>
+            <ul id="card-no-error-wrapper" class="has-error-text"></ul>
+            <ul class="signup-card-list">
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?255148577" width="49" height="20" alt="">
+              </li>
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?255148577" width="34" height="20" alt="">
+              </li>
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?255148577" width="30" height="20" alt="">
+              </li>
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?255148577" width="32" height="20" alt="">
+              </li>
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?255148577" width="32" height="20" alt="">
+              </li>
+              <li>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/card/discover.svg?255148577" width="32" height="20" alt="">
+              </li>
+            </ul>
+          </div>
+
+          <div class="form-group signup-form-expire">
+            <%= f.label :expire_month, "有効期限" %>
+            <span class="form-require">必須</span>
+            <br>
+            <div class="select-wrap">
+              <%= f.select :expire_month, [["01", "01"], ["02", "02"], ["03", "04"], ["04", "04"], ["05", "05"], ["06", "06"], ["07", "07"], ["08", "08"], ["09", "09"], ["10", "10"], ["11", "11"], ["12", "12"]], {}, { class: 'select-default' } %>
+              <i class="icon-arrow-bottom"></i>
+            </div>
+            <span>月</span>
+            <ul id="expire-mm-error-wrapper" class="has-error-text"></ul>
+            <div class="select-wrap">
+              <%= f.select :expire_year, [["18", "18"], ["19", "19"], ["20", "20"], ["21", "21"], ["23", "23"], ["24", "24"], ["25", "25"], ["26", "26"], ["27", "27"], ["28", "28"]], {}, { class: 'select-default' } %>
+              <i class="icon-arrow-bottom"></i>
+            </div>
+            <span>年</span>
+            <ul id="expire-yy-error-wrapper" class="has-error-text"></ul>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :security_code, "セキュリティコード" %>
+            <span class="form-require">必須</span>
+            <%= f.text_field :security_code, class: 'input-default', placeholder: "カード背面4桁もしくは3桁の番号" %>
+            <ul id="security-code-error-wrapper" class="has-error-text"></ul>
+            <div class="signup-seqcode">
+              <div class="signup-seqcode-text" data-js="show-tips-toggle">
+                <span class="form-question">?</span>カード裏面の番号とは？
+              </div>
+              <div class="signup-seqcode-info" data-js="show-tips-content">
+                カードの裏面をご参照ください。
+                <br>
+                <img src="//www-mercari-jp.akamaized.net/assets/img/signup/seq-card.png?255148577" alt="" width="240">
+              </div>
+            </div>
+          </div>
+          <p id="primary-error" class="has-error-text"></p>
+          <%= f.submit "追加する", class: 'btn-default btn-red' %>
+        </div>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KLPT5L5"></script>
+        <script src="https://p01.mul-pay.jp/ext/js/token.js" async=""></script>
+        <script src="//www-mercari-jp.akamaized.net/assets/js/get_gmopg_card_token.js?736512970" async=""></script>
+        <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/880621981/?random=1539162080863&amp;cv=9&amp;fst=1539162080863&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=659255991&amp;u_h=900&amp;u_w=1440&amp;u_ah=825&amp;u_aw=1440&amp;u_cd=24&amp;u_his=50&amp;u_tz=540&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=Ga1&amp;sendb=1&amp;frm=0&amp;url=https%3A%2F%2Fwww.mercari.com%2Fjp%2Fmypage%2Fcard%2Fcreate%2F&amp;ref=https%3A%2F%2Fwww.mercari.com%2Fjp%2Fmypage%2Fcard%2F&amp;tiba=%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E3%82%AB%E3%83%BC%E3%83%89%E6%83%85%E5%A0%B1%E5%85%A5%E5%8A%9B%20-%20%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%20%E3%83%95%E3%83%AA%E3%83%9E&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
+      <% end %>
+    </section>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

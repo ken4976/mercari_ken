@@ -1,0 +1,204 @@
+<div class="single-container">
+  <%= render "shared/single-header" %>
+
+  <main class="single-main">
+    <section class="l-single-container buy-item-container">
+      <div id="sell-container">
+        <div data-reactroot="">
+          <div class="sell-container-inner">
+            <h2 class="l-single-head">商品の情報を入力</h2>
+            <%= form_for @item, html: {class: "sell-form"} do |f| %>
+            <%= f.hidden_field :seller_id, value: current_user.id %>
+              <div class="sell-upload-box">
+                <h3 class="sell-upload-head"> 出品画像 <span class="form-require">必須</span></h3>
+                <p>最大4枚までアップロードできます</p>
+                <div class="sell-dropbox-container clearfix">
+
+<!-- 画像のプレビュー表示用 -->
+                  <div class="sell-upload-items">
+                    <ul>
+                    </ul>
+                  </div>
+
+                  <div class="sell-upload-drop-box">
+                    <%= f.fields_for :images do |image| %>
+                      <%= image.file_field :image, class: 'sell-upload-drop-file' %>
+                        <pre class="visible-pc">ドラッグアンドドロップ
+      またはクリックしてファイルをアップロード</pre>
+                        <i class="icon-camera"></i>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="sell-content">
+                <div class="form-group">
+                  <label>商品名<span class="form-require">必須</span></label>
+                  <div>
+
+                    <%= f.text_field :name, class: "input-default", maxlength: 40, placeholder: "商品名（必須 40文字まで)" %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>商品の説明<span class="form-require">必須</span></label>
+                  <%= f.text_area :text, class: "textarea-default", rows: "5", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" %>
+                </div>
+              </div>
+              <div class="sell-content clearfix">
+                <h3 class="sell-sub-head">商品の詳細</h3>
+                <div class="sell-form-box">
+                  <div class="form-group"><label>カテゴリー<span class="form-require">必須</span></label>
+                    <div>
+
+<!-- 親カテゴリ選択 -->
+                      <div class="select-wrap parent-category-select-wrap">
+                        <%= f.select :category_id, [["レディース", "1"],["メンズ", "2"],["ベビー・キッズ", "3"]], {prompt: "---"}, {class: "select-default"} %>
+                        <i class="icon-arrow-bottom"></i>
+                      </div>
+<!-- 子カテゴリ選択 -->
+                      <div class="select-wrap child-category-select-wrap">
+                        <!-- <select class="select-default">
+                          <option value="">---</option>
+                        </select>
+                        <i class="icon-arrow-bottom"></i> -->
+                      </div>
+<!-- 孫カテゴリ選択 -->
+                      <div class="select-wrap grand-child-category-select-wrap">
+                       <!--  <select class="select-default">
+                          <option value="">---</option>
+                        </select>
+                        <i class="icon-arrow-bottom"></i> -->
+                      </div>
+                    </div>
+                  </div>
+<!-- サイズ選択 -->
+                  <div class="form-group size-form-group">
+                    <label>サイズ<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+<!--                  <select class="select-default">
+                        <option value="">---</option>
+                      </select> -->
+                      <%= f.collection_select :size_id, Size.all, :id, :size, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+
+                  <div class="form-group size-form-group">
+                    <label>ブランド<span class="form-arbitrary">任意</span></label>
+                    <div>
+                      <div class="select-wrap">
+                      <%= f.collection_select :brand_id, Brand.all, :id, :brand, {prompt: "---"}, {class: "input-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                      </div>
+                      <!-- <input class="input-default" value="" placeholder="例）シャネル"> -->
+<!-- インクリメンタルサーチ用 -->
+                      <div>
+                      </div>
+
+                    </div><!-- react-empty: 274 -->
+                  </div>
+
+                  <div class="form-group">
+                    <label>商品の状態<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+                      <%= f.select :condition, Item.conditions_i18n.keys.map {|k| [Item.conditions_i18n[k], k]}, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sell-content clearfix">
+                <h3 class="sell-sub-head">配送について</h3>
+                <a href="/jp/help_center/article/68/" target="_blank" class="form-question">?</a>
+                <div class="sell-form-box">
+                  <div class="form-group">
+                    <label>配送料の負担<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+                      <%= f.select :shipping_payer, Item.shipping_payers_i18n.keys.map {|k| [Item.shipping_payers_i18n[k], k]}, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>配送の方法<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+                      <%= f.select :shipping_method, Item.shipping_methods_i18n.keys.map {|k| [Item.shipping_methods_i18n[k], k]}, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>発送元の地域<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+                      <%= f.collection_select :area_id, Area.all, :id, :area, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>発送までの日数<span class="form-require">必須</span></label>
+                    <div class="select-wrap">
+                      <%= f.select :days_to_ship, Item.days_to_ships_i18n.keys.map {|k| [Item.days_to_ships_i18n[k], k]}, {prompt: "---"}, {class: "select-default"} %>
+                      <i class="icon-arrow-bottom"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <removed_queries> -->
+              <div class="sell-content clearfix">
+                <h3 class="sell-sub-head">販売価格(500〜9,999,999)</h3>
+                <a href="/jp/help_center/article/64/" target="_blank" class="form-question">?</a>
+                <div class="sell-form-box">
+                  <ul class="sell-price">
+                    <li class="form-group">
+                      <div class="clearfix">
+                        <label class="l-left">価格<span class="form-require">必須</span></label>
+                        <div class="l-right sell-price-input">¥
+                          <div>
+
+                            <%= f.number_field :price, class: "input-default", placeholder: "例）300", value: "" %>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- <li class="clearfix">
+                      <div class="l-left">販売手数料 (10%)</div>
+                      <div class="l-right">-</div>
+                    </li>
+                    <li class="clearfix bold">
+                      <div class="l-left">販売利益</div>
+                      <div class="l-right">-</div>
+                    </li> -->
+                  </ul>
+                </div>
+              </div>
+              <div class="modal" role="dialog" tabindex="-1">
+                <div class="modal-inner">
+                </div>
+              </div>
+              <div class="sell-content sell-btn-box">
+                <div>
+                  <p>
+                    <a href="/jp/help_center/getting_started/prohibited_items/" target="_blank">禁止されている出品</a>、
+                    <a href="/jp/help_center/getting_started/prohibited_conduct/" target="_blank">行為</a>
+                    を必ずご確認ください。
+                  </p>
+                  <p>またブランド品でシリアルナンバー等がある場合はご記載ください。
+                    <a href="/jp/help_center/getting_started/counterfeit_goods/" target="_blank">偽ブランドの販売</a>は犯罪であり処罰される可能性があります。
+                  </p>
+                  <p>また、出品をもちまして
+                    <a href="/jp/seller_terms/">加盟店規約</a>に同意したことになります。
+                  </p>
+                </div>
+                <%= f.submit "出品する", class: "btn-default btn-red" %>
+                <%= link_to "/items/#{@item.id}", class: "btn-default btn-black", method: :delete do %>商品を削除する<% end %>
+                <%= link_to root_path, class: "btn-default btn-gray" do %>もどる<% end %>
+              </div>
+            <% end %>
+            <div class="overlay">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%= render "shared/single-footer" %>
+</div>

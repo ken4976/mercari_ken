@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  parent_category: MyText
+  child_category: MyText
+  grand_child_category: MyText
+
+two:
+  id: 1
+  parent_category: MyText
+  child_category: MyText
+  grand_child_category: MyText

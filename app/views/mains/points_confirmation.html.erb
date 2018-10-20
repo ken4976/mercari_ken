@@ -1,0 +1,42 @@
+<%= render "shared/header"%>
+<div class="l-container">
+  <div class="l-content"> 
+    <section class="l-chapter-container">
+	  <h2 class="l-chapter-head">ポイント</h2>
+	  <ul class="mypage-nav-list">
+	    <li>
+	      <div class="mypage-nav-list-item clearfix">
+	        <div class="l-left">
+	          所持ポイント
+	        </div>
+	        <div class="l-right">
+	          P 0
+	        </div>
+	      </div>
+	    </li>
+	    <li>
+	      <a href="/mains/points_history/" class="mypage-nav-list-item">
+	        ポイント履歴
+            <i class="fas fa-angle-right"></i>
+	      </a>
+	    </li>
+	    <li>
+          <a href="/mains/points_limit" class="mypage-nav-list-item">
+            ポイントの有効期限
+	      <i class="fas fa-angle-right"></i>
+	      </a>
+	    </li>
+	    <li>
+	      <a href="/jp/help_center/article/40/" class="mypage-nav-list-item" target="_blank">
+	        ポイントとは？
+	        <i class="fas fa-angle-right"></i>
+	      </a>
+	    </li>
+	  </ul>
+    </section>
+  </div>
+<%= render "shared/sidebar" %>
+</div>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

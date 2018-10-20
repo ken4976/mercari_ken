@@ -1,0 +1,15 @@
+  <li>
+    <%= link_to item_path(item), class: "mypage-item-link" do %>
+      <figure>
+        <% item.images.first(1).each do |image| %>
+         <%= image_tag image.image, class: "is-higher-height lazyloaded" %>
+        <% end %>
+      </figure>
+      <div class="mypage-item-body">
+        <div class="mypage-item-text">
+          <%= item.name %>
+        </div>
+      </div>
+      <i class="fas fa-angle-right"></i>
+    <% end %>
+  </li>

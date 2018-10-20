@@ -1,0 +1,432 @@
+/*mypage*/
+
+.l-container {
+  margin: 40px auto 0;
+  width: 1020px;
+  padding: 0 0 40px;
+}
+
+main {
+  display: block;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.l-content {
+  float: right;
+  width: 700px;
+}
+
+.mypage-user-icon {
+  height: 200px;
+  position: relative;
+  padding: 20px;
+  background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?82236637);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+a {
+  color: #0099e8;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+area, button, input, label, select, textarea, [tabindex] {
+  touch-action: manipulation;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mypage-user-icon {
+  > a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    color: #333;
+  }
+  figure {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+}
+
+img, audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+.mypage-user-icon h2 {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.mypage-number {
+  margin: 8px 0 0;
+  font-size: 0;
+  div {
+    display: inline-block;
+    font-size: 14px;
+  }
+  span {
+    margin: 0 0 0 8px;
+    font-size: 18px;
+  }
+  div + div {
+    margin: 0 0 0 16px;
+  }
+}
+
+.mypage-tab-container-notification-todo {
+  margin: 0;
+  background: #fff;
+}
+
+.mypage-tabs, .listing-tabs, .review-history-tabs {
+  border: 0;
+  background: #eee;
+  font-size: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.mypage-tabs li.active, .listing-tabs li.active, .review-history-tabs li.active {
+  background: #fff;
+}
+
+.mypage-tabs li {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.listing-tabs li, .review-history-tabs li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.mypage-tabs li.active a, .listing-tabs li.active a, .review-history-tabs li.active a {
+  border-top: 2px solid #ea352d;
+}
+
+.mypage-tabs a, .listing-tabs a, .review-history-tabs a {
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 72px;
+}
+
+.mypage-tabs .mypage-nav-number, .listing-tabs .mypage-nav-number, .review-history-tabs .mypage-nav-number {
+  top: 16px;
+  right: 2px;
+}
+
+.hidden-large {
+  display: none;
+}
+
+.mypage-nav-number {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ea352d;
+  text-align: center;
+  line-height: 24px;
+  color: #fff;
+  transform: translate(0, -50%);
+}
+
+.tab-content .tab-pane {
+  &.active {
+    display: block;
+  }
+  display: none;
+}
+
+.mypage-item-list li {
+  &:first-child {
+    border-bottom: 1px solid #eee;
+  }
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.mypage-item-link {
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+  figure {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.mypage-item-list img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.mypage-item-body {
+  margin: 0 40px 0 68px;
+}
+
+.mypage-item-text {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 4.4em;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+.mypage-item-link {
+  time {
+    display: inline-block;
+    color: #888;
+  }
+  .icon-time {
+    margin: 0 8px 0 0;
+  }
+}
+
+i {
+  &[class^='icon-'], &[class*='icon-'] {
+    display: inline-block;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.icon-time {
+  font-size: 16px;
+  vertical-align: middle;
+  &:before {
+    content: '\e02a';
+  }
+}
+
+.mypage-item-link {
+  time span {
+    vertical-align: middle;
+  }
+  .icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translate(0, -50%);
+  }
+}
+
+.icon-arrow-right:before {
+  content: '\e005';
+}
+
+.mypage-item-list li:last-child {
+  border: 0;
+}
+
+.mypage-go-list {
+  padding: 16px;
+  a {
+    display: block;
+    height: 56px;
+    margin: 0 auto;
+    background: #eee;
+    color: #333;
+    line-height: 56px;
+    text-align: center;
+  }
+}
+
+.mypage-item-list li.mypage-item-not-found {
+  border: 0;
+}
+
+.mypage-item-not-found {
+  padding: 160px 0 60px;
+  background: url(https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?82236637);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all ease-out .3s;
+  opacity: 0;
+  transform: translate(0, -10px);
+}
+
+.modal-banner {
+  text-align: center;
+}
+
+.modal-inner {
+  max-width: none;
+  width: 600px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.modal-banner-eye-catch {
+  height: 310px;
+  overflow: hidden;
+  position: relative;
+  background: url(https://www.mercari.com/jp/assets/img/common/common/bg-modal-app-banner.jpg?82236637);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  img {
+    &:first-child {
+      width: auto;
+      height: 100%;
+    }
+    &:last-child {
+      top: 16px;
+      left: 16px;
+      width: 110px;
+      height: 29px;
+      position: absolute;
+    }
+  }
+}
+
+.modal-banner-body {
+  padding: 16px 2.5%;
+}
+
+.modal-banner {
+  h2 {
+    font-size: 34px;
+    line-height: 1;
+    color: #ea352d;
+  }
+  p {
+    font-size: 18px;
+    margin: 16px 0 0;
+  }
+}
+
+.modal-banner-app {
+  margin: 16px 0 0;
+  font-size: 0;
+  text-align: center;
+  a {
+    &:first-child {
+      margin: 0;
+    }
+    display: inline-block;
+    margin: 0 0 0 8px;
+  }
+  img {
+    width: 168px;
+    height: 50px;
+  }
+}
+
+[data-toggle='open-app'] {
+  display: none;
+}
+
+.modal-banner-app-open {
+  display: block;
+  width: 100%;
+  margin: 32px 0 0;
+  background: #ea352d;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+}
+
+.modal-inner .icon-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.64);
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mypage-tab-container {
+  margin: 40px 0 0;
+  background: #fff;
+}
+
+.mypage-tab-head {
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+}

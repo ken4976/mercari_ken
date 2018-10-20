@@ -1,0 +1,82 @@
+<%= render "shared/header" %>
+<%= render "shared/head-banner" %>
+
+  <section class="pickup-container">
+    <h2>ピックアップカテゴリー</h2>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "/categories/1" do %>レディース<% end %>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @ladies.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "/categories/2" do %>メンズ<% end %>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @mens.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <a href="#">コスメ・香水・美容</a>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @cosmes.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "/categories/3" do %>ベビー・キッズ<% end %>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @babies.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+  </section>
+  <section class="pickup-container">
+    <h2>ピックアップブランド</h2>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "/brands/1" do %>アー ヴェ ヴェ<% end%>
+      </h3>
+      <div class="items-box-content clearfix">
+       <% @chanels.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "/brands/28" do %>アーバンリサーチ<%end %>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @supremes.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <a href="#">エキュイトーキョー</a>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @nikes.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+  </section>
+
+  <%= render "shared/seller-button" %>
+  <%= render "shared/footer" %>

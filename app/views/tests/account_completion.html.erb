@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <title>Mercari</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="single-container">
+      <header class="single-container__header">
+        <h1 class="single-container__header__logo-position">
+          <%= link_to "https://www.mercari.com/jp/" do %>
+            <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?249128278", :alt => "mercari" %>
+          <% end %>
+        </h1>
+        <nav class="single-container__header__progress-bar signup-bar">
+          <ol class="progress-dots clearfix">
+            <li class="progress-dots__a-dot through">
+              会員情報
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot through">
+              電話番号認証
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot through">
+              住所入力
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot through">
+              支払い方法
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot active">
+              完了
+              <div class="progress-status-last" id="bb"></div>
+            </li>
+          </ol>
+        </nav>
+      </header>
+      <main class="single-main">
+        <section class="l-single-container">
+          <h2 class="l-chapter-head">完了</h2>
+          <div class="l-chapter-container">
+            <form action="https://www.mercari.com/jp/logout/" method="POST" class="l-single-inner" novalidate="novalidate">
+              <div class="l-single-content">
+                <!-- <button type="submit" class="btn-default btn-red">登録が完了しました</button> -->
+                <%= link_to '登録が完了しました', "/", class: "btn-default btn-red" %>
+                <input type="hidden" name="__csrf_value" value="">
+              </div>
+            </form>
+            <footer class="single-footer">
+              <nav>
+                <ul class="single-footer__lists clearfix">
+                  <li class="single-footer__lists__a-list">
+                    <%=link_to 'プライバシーポリシー',  "https://www.mercari.com/jp/privacy/", class: "link-style" %>
+                  </li>
+                  <li class="single-footer__lists__a-list">
+                    <%=link_to 'メルカリ利用規約', "https://www.mercari.com/jp/tos/", class: "link-style"  %>
+                  </li>
+                  <li class="single-footer__lists__a-list">
+                    <%= link_to '特定商取引に関する表記', "https://www.mercari.com/jp/tokutei/", class: "link-style" %>
+                  </li>
+                </ul>
+              </nav>
+              <%= link_to "https://www.mercari.com/jp/", class: "single-footer-logo" do %>
+                <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?249128278", :alt => "mercari", :width => "80", :height => "65" %>
+              <% end %>
+              <p>
+                <small>© 2018 Mercari</small>
+              </p>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+　</body>
+</html>

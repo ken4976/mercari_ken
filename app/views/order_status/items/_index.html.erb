@@ -1,0 +1,20 @@
+<li>
+  <%= link_to "/order_status/items/#{item.id}", class: "mypage-item-link" do %>
+    <figure>
+      <% item.images.first(1).each do |content| %>
+       <%= image_tag content.image %>
+      <% end %>
+    </figure>
+    <div class="mypage-item-body">
+      <time>
+        <i class="icon-time"></i>
+        <span><%= item.updated_at.to_s(:purchased_at) %></span>
+      </time>
+      <div class="clearfix">
+        <div class="l-left">販売利益</div>
+        <div class="l-right">¥ <%= number_with_delimiter(item.benefit_from_selling.floor) %></div>
+      </div>
+    </div>
+    <i class="fas fa-angle-right"></i>
+  <% end %>
+</li>

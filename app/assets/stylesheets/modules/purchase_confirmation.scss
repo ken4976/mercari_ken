@@ -1,0 +1,39 @@
+.wait .icon-time:before {
+  font-size: 40px;
+}
+
+.transact-attention {
+  i {
+    margin: 0 8px 0 0;
+    font-size: 32px;
+    color: #ea352d;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+
+.buy-content:first-of-type {
+    margin: 0;
+}
+
+.buy-done-flow {
+  text-align: center;
+  p {
+    margin: 16px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  div {
+    margin: 16px 0 0;
+    background: url(/jp/assets/img/transaction/bg-buy-done-flow.png?37407030);   background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    text-align: center;
+  }
+  a {
+    display: block;
+    margin: 16px 0 0;
+  }
+}

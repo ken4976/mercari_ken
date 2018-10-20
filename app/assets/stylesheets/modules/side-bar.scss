@@ -1,0 +1,74 @@
+.l-container {
+  width: 1020px;
+  margin: 40px auto 0;
+  background: #f5f5f5;
+  .l-content{
+    // background-color:white;
+    float: right;
+    width: 700px;
+  }
+  .l-side {
+    float: left;
+    width: 280px;
+    margin: 0,40px,0,0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    border-style: solid;
+    border-width: 0;
+    display: block;
+    background-repeat: no-repeat;
+    .mypage-nav {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 14px;
+      .mypage-nave-list {
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        color: #333;
+        text-decoration: none ;
+        font-family: "YuGothic";
+        .mypage-nav-head {
+          margin-top: 40px;
+          margin-bottom: 6px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+    .l-visible-large {
+      margin-top: 40px;
+      width: 280px;
+      height: 220px;
+      background-color: pink;
+    }
+  }
+}
+
+.fa-angle-right {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  color: #ccc;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+}
+
+.li {
+  background: #eee;
+  font-weight: 600;
+}
+
+.styleimage {
+  height: 220px;
+  width: 2
+}
+
+.link{
+  color: black;
+}

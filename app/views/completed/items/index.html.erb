@@ -1,0 +1,50 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="mypage-tab-container">
+      <h2 class="mypage-tab-head">出品した商品</h2>
+      <ul class="listing-tabs">
+        <li class="">
+          <h3>
+            <%= link_to "出品中", listings_items_path %>
+            </a>
+          </h3>
+        </li>
+        <li class="">
+          <h3>
+            <%= link_to "取引中", in_progress_items_path %>
+            </a>
+          </h3>
+        </li>
+        <li class="active">
+          <h3>
+            <a href="#mypage-tab-transaction-old" data-toggle="tab">
+              売却済み
+            </a>
+          </h3>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <ul id="mypage-tab-transaction-old" class="mypage-item-list tab-pane active">
+          <% if @items.presence %>
+            <%= render partial: "item", collection: @items %>
+          <% else %>
+            <li class="mypage-item-not-found bold">売却済みの商品がありません</li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+    <ul class="mypage-history pager">
+      <li class="pager-prev pager-cell">
+        <a href=""><i class="fas fa-angle-left"></i></a>
+      </li>
+      <li class="pager-next-fix pager-cell">
+        <a href=""><i class="fas fa-angle-right"></i></a>
+      </li>
+    </ul>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

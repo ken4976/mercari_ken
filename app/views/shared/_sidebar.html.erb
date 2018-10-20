@@ -1,0 +1,160 @@
+<div class="l-side">
+  <nav class="mypage-nav">
+    <ul class="mypage-nave-list", style="list-style: none;">
+      <li>
+        <%= link_to user_path(current_user), class: "mypage-nav-list-item" do %>
+          マイページ
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to notification_user_path(current_user), class: "mypage-nav-list-item" do %>
+          お知らせ
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to todo_user_path(current_user), class: "mypage-nav-list-item" do %>
+          やることリスト
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to like_history_user_path(current_user), class: "mypage-nav-list-item" do %>
+          いいね！一覧
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <a href="" class="mypage-nav-list-item ">
+          LIVE配信
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </li>
+      <li>
+        <%= link_to new_item_path, class: "mypage-nav-list-item" do %>
+          出品する
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to listings_items_path, class: "mypage-nav-list-item" do %>
+          出品した商品-出品中
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to in_progress_items_path, class: "mypage-nav-list-item" do %>
+          出品した商品-取引中
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to completed_items_path, class: "mypage-nav-list-item" do %>
+          出品した商品-売却済み
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to purchase_items_path, class: "mypage-nav-list-item" do %>
+          購入した商品-取引中
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to purchased_items_path, class: "mypage-nav-list-item" do %>
+          購入した商品-過去の取引
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to news_user_path(current_user), class: "mypage-nav-list-item" do %>
+          ニュース一覧
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to review_history_user_path(current_user), class: "mypage-nav-list-item" do %>
+          評価一覧
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <a href="" class="mypage-nav-list-item ">
+          ガイド
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" class="mypage-nav-list-item ">
+          お問い合わせ
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </li>
+    <!-- </ul> -->
+        <h3 class="mypage-nav-head">売上・ポイント</h3>
+    <!-- <ul class="mypage-nav-list", style="list-style: none;"> -->
+      <li>
+        <a href="/order_status/items/pre_index" class="mypage-nav-list-item ">
+          売上・振込申請
+      <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+      <li>
+        <a href="/mains/points_confirmation/" class="mypage-nav-list-item ">
+          ポイント
+      <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+  <h3 class="mypage-nav-head">設定</h3>
+      <li>
+        <%= link_to edit_profile_user_path(current_user), class: "mypage-nav-list-item" do %>
+          プロフィール
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+    </li>
+      <li>
+          <div class="mypage-nav-list-item" >
+            <%= link_to "住所変更", new_address_path, class: "link"%>
+            <i class="fas fa-angle-right"></i>
+          </div>
+       <!--  <a href="/addresses/new" class="mypage-nav-list-item "> -->
+    </li>
+      <li>
+        <%= link_to payjp_path(current_user), class: "mypage-nav-list-item" do %>
+          支払い方法
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to edit_user_registration_path, class: "mypage-nav-list-item" do %>
+          メール/パスワード
+          <i class="fas fa-angle-right"></i>
+        <% end %>
+      </li>
+      <li>
+        <a href="/mains/identification" class="mypage-nav-list-item ">
+          本人情報
+      <i class="fas fa-angle-right"></i>
+    </a>
+    </li>
+      <li>
+        <a href="/mains/sms_confirmation" class="mypage-nav-list-item ">
+          電話番号の確認
+      <i class="fas fa-angle-right"></i>
+    </a>
+    </li>
+      <li>
+        <a href="/mains/logout" class="mypage-nav-list-item ">
+          ログアウト
+      <i class="fas fa-angle-right"></i>
+    </a>
+    </li>
+  </ul>
+  </nav>
+<div class="l-visible-large">
+  <a href="https://itunes.apple.com/jp/app/id667861049?l=ja&amp;mt=8" target="_blank" class="side-banner">
+  <img src="https://www-mercari-jp.akamaized.net/assets/img/common/jp/side_banner.jpg?815696604" class=" styleimage">
+  </a>
+</div>
+</div>

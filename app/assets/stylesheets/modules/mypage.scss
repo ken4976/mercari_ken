@@ -1,0 +1,347 @@
+.setting-profile-content {
+  padding: 40px 16px;
+  border-style: solid;
+  border-width: 0;
+  background-color: white;
+}
+
+.textarea-default {
+  min-height: 216px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  outline: 0;
+}
+
+.setting-profile-content .btn-red {
+  margin: 16px 0 0;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.l-single-inner {
+  padding: 64px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.l-single-content {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.form-group {
+  label {
+    font-weight: 600;
+  }
+  margin: 40px 0 0;
+}
+
+.form-require {
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+  background-clip: border-box;
+}
+
+.form-group .input-default {
+  width: 100%;
+  margin: 8px 0 0;
+  // height: 28px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  :focus {
+    border-color: #0099e8;
+  }
+}
+
+.select-wrap {
+  margin: 8px 0 0;
+  position: relative;
+  background: #fff;
+}
+
+.form-group select {
+  width: 100%;
+}
+
+.select-default {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-arbitrary {
+  background: #ccc;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.btn-red {
+  margin: 16px 0 0;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.l-chapter-head {
+  padding: 12px 4%;
+  border-bottom: 1px solid #f5f5f5;
+  text-align: center;
+  font-size: 24px;
+}
+
+.l-single-inner {
+  p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+  .btn-red:first-child {
+    margin: 0;
+  }
+}
+
+.form-group .input-default + label {
+  margin: 24px 0 0;
+}
+
+label {
+  display: inline-block;
+}
+
+.settings-add-card {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  border-style: solid;
+  border-width: 0;
+  a {
+    margin-bottom: 8px !important;
+  }
+}
+
+.fa-credit-card {
+  margin-right: 16px;
+}
+
+.l-chapter-sub-head {
+  font-size: 16px;
+}
+
+.settings-payment-list li {
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.settings-payment-remove {
+  position: absolute;
+  top: 270px;
+  right: 400px;
+  padding: 4px 6px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ea352d;
+  color: #ea352d;
+}
+
+.settings-not-regist a {
+  display: block;
+  margin: 40px 0 0;
+  text-align: right;
+}
+
+.fa-angle-right {
+  margin-right: 16px;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.signup-card-list li {
+  margin: 8px 0 0;
+  font-size: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 0 0 0 8px;
+  vertical-align: middle;
+}
+
+.signup-form-expire .select-wrap {
+  display: inline-block;
+  width: 35%;
+}
+
+.form-group .select-wrap {
+  margin: 8px 0 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.has-error-text {
+  color: #ea352d;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.signup-seqcode-text {
+  text-align: right;
+  color: #0099e8;
+}
+
+.form-question {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.l-single-inner .btn-red {
+  margin: 40px 0 0;
+}
+
+.form-require {
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.mypage-identification .address-info {
+  margin: 0 0 0 4px;
+}
+
+.address-info address {
+  font-size: 16px;
+  margin: 8px 0 0;
+}
+
+address {
+  font-style: normal;
+}
+
+p {
+  font-family: "YuGothic";
+}
+
+.birthday-select-wrap {
+  display: inline-block;
+  .select-wrap {
+    display: inline-block;
+    width: 140px;
+    + span {
+      margin: 0 8px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}
+
+.form-info-text {
+  margin: 8px 0 0;
+  color: #888;
+  line-height: 1.5;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.select-wrap .fa-angle-down {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  z-index: 2;
+  color: #888;
+  font-size: 8px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.fa-angle-down:before {
+  content: '\e001';
+}
+
+select {
+  -webkit-appearance: none;
+  /* ベンダープレフィックス(Google Chrome、Safari用) */
+}
+
+
+
+.setting-profile-icon {
+    padding: 32px 16px 24px;
+    background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?82236637);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 0;
+}
+
+.setting-profile-content .textarea-default {
+    min-height: 216px;
+}

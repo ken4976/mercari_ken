@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Mercari</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="single-container">
+      <%= render "shared/single-header"%>
+      <main class="single-main">
+        <section class="l-single-container buy-item-container">
+          <div class="transact-attention wait">
+            <h3>
+              <i class="icon-time"></i>
+              <span>発送をお待ちください</span>
+            </h3>
+            <p>出品者からの発送通知をお待ちください</p>
+          </div>
+          <h2 class="l-single-head">購入が完了しました</h2>
+          <section class="buy-content buy-item">
+            <div class="buy-content-inner">
+              <h3 class="buy-item-image">
+                <% @item.images.first(1).each do |content| %>
+                  <%= image_tag content.image, class: "lazyload" %>
+                <% end %>
+              </h3>
+              <p class="buy-item-name bold"><%= @item.name %></p>
+            </div>
+          </section>
+          <section class="buy-content buy-item">
+            <div class="buy-content-inner">
+              <p class="buy-price-ja bold">
+                ¥ <%= @item.price %>
+                <span class="item-shipping-fee f14 bold">送料込み</span>
+              </p>
+            </div>
+          </section>
+          <section class="buy-content buy-user-info">
+            <div class="buy-content-inner">
+              <h3>配送先 </h3>
+              <address class="buy-user-info-text">
+                〒sss-ssss
+                <br>
+                sss sss
+                ssss
+                <br>
+                sss sss
+              </address>
+              <p class="buy-user-info-text"> 
+              </p>
+            </div>
+          </section>
+          <section class="buy-content buy-user-info" data-buy="pay-method">
+            <div class="buy-content-inner">
+              <h3>支払い方法</h3>
+              <p class="buy-user-info-text">
+                ************ssss
+                <br>
+                ss / ss
+                <figure>
+                  <img src="//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2834800195" width="26" height="20" alt="jcb">
+                </figure>
+              </p>
+            </div>
+          </section>
+          <section class="buy-content buy-done-flow">
+            <h3>発送通知後の流れ</h3>
+            <div>
+              <i class="material-icons">sentiment_very_satisfied</i>
+              <i class="material-icons">sentiment_neutral</i>
+              <i class="material-icons">sentiment_very_dissatisfied</i>
+            </div>
+            <p>
+              商品を受け取ったら<br>出品者の評価をしましょう。<br>
+              購入代金が出品者に振り込まれます。<br>評価後に取引は完了です。<br>
+            </p>
+            <a href="/" class="bold">マイページへもどる</a>
+          </section>
+        </section>
+      </main>
+      <%= render "shared/single-footer"%>
+    </div>
+  </body>
+
+</html>

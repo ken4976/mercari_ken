@@ -1,0 +1,79 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">メール/パスワード</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'l-single-inner' }) do |f| %>
+        <%= devise_error_messages! %>
+        <!-- <input type="hidden" name="__csrf_value" value=""> -->
+        <div class="l-single-content">
+          <div class="form-group">
+            <%= f.label :email, "メールアドレス" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input-default', placeholder: "PC・携帯どちらでも可" %>
+            <p class="form-info-text">メールアドレスを変更すると確認メールが送信されます。メール内のURLをクリックすると変更完了です。</p>
+          </div>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <div class="form-group">
+            <%= f.label :current_password, "現在のパスワード" %><br />
+            <%= f.password_field :current_password, autocomplete: "current-password", class: 'input-default', placeholder: "6文字以上" %>
+            <%= f.label :password, "新しいパスワード" %><br />
+            <%= f.password_field :password, autocomplete: "new-password", class: 'input-default', placeholder: "6文字以上" %>
+            <%= f.label :password_confirmation, "新しいパスワード確認" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'input-default', placeholder: "6文字以上" %>
+            <p class="form-info-text">パスワードを設定したい場合は上記をすべて入力してください。（設定しない場合は空欄）</p>
+          </div>
+          <%= f.submit "変更する", class: "btn-default btn-red actions" %>
+        </div>
+      <% end %>
+    </section>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>
+
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

@@ -1,0 +1,19 @@
+<%= render "shared/header"%>
+
+<div class="l-container">
+
+<div class="l-content">
+  <div class="l-chapter-container">
+        <form action="https://www.mercari.com/jp/logout/" method="POST" class="l-single-inner" novalidate="novalidate">
+      <div class="l-single-content">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-default btn-red"%>
+        <input type="hidden" name="__csrf_value" value="">
+      </div>
+    </form>
+  </div>
+
+</div>
+<%= render "shared/sidebar" %>
+</div>
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

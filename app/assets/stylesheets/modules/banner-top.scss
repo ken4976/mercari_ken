@@ -1,0 +1,54 @@
+.top-main-visual {
+  background-image: url("https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?82236637");
+  height: 100%;
+  background-size: cover;
+  display: block;
+}
+
+.top-banner {
+  height: 390px;
+  margin: 0 auto;
+  max-width: 860px;
+  position: relative;
+  width: 860px;
+}
+
+.top-main-visual-content {
+  color: white;
+  float: left;
+  height: 294.98px;
+  padding-top: 47px;
+  position: absolute;
+  width: 480px;
+  h2 {
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    line-height: 1.77778;
+    margin-top: 16px;
+  }
+}
+
+.top-main-visual-store {
+  float: left;
+  height: 50px;
+  width: 480px;
+  margin: 24px 0 0;
+  line-height: 0;
+  ul li {
+    float: left;
+    list-style: none;
+  }
+  ul li:last-child {
+    margin-left: 8px;
+  }
+}
+
+.smart-phone-app {
+  float: right;
+}

@@ -1,0 +1,13 @@
+/*mypage/listings/listing*/
+
+.mypage-tab-container:nth-of-type(1) {
+  margin: 0;
+}
+
+.listing-tabs li {
+  width: 33.3%;
+}
+
+.mypage-tab-container+.pager {
+  margin: 40px 0 0;
+}

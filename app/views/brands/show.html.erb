@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+<%= render "shared/head-banner" %>
+
+  <section class="pickup-container">
+    <h2>ピックアップカテゴリー</h2>
+    <section class="items-box-container clearfix">
+      <h3 class="text-center">
+        <%= link_to "" do %><%= @brand.brand %><% end %>
+      </h3>
+      <div class="items-box-content clearfix">
+        <% @items.each do |item| %>
+          <%= render partial: "item-box", locals: { item: item } %>
+        <% end %>
+      </div>
+    </section>
+  </section>
+
+  <%= render "shared/seller-button" %>
+  <%= render "shared/footer" %>

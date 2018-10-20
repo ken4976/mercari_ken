@@ -1,0 +1,117 @@
+.pickup-container {
+  background-color: rgb(245, 245, 245);
+  height: 100%;
+  padding: 40px 0;
+  h2 {
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.items-box-container {
+  height: 378px;
+  margin: 0 auto;
+  max-width: 940px;
+  .text-center {
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    margin: 26px 11px;
+    a {
+     color: #0099e8;
+    }
+  }
+}
+
+.items-box {
+  float: left;
+  height: 330px;
+  margin-left: 20px;
+  width: 213px;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  .items-box-photo {
+    height: 220px;
+    padding-bottom: 213px;
+    width: 220px;
+    img {
+      height: 220.7px;
+      width: 213px;
+      object-fit: cover;
+    }
+  }
+}
+
+.item-sold-out-badge {
+  margin: 0 auto;
+  position: relative;
+}
+
+.item-sold-out-badge::before {
+  content: "";
+  top: 0;
+  left: 0;
+  border-bottom: 5.5em solid transparent;
+  border-left: 5.5em solid #ea352d;
+  position: absolute;
+  z-index: 100;
+}
+
+.item-sold-out-badge::after {
+  content: "SOLD";
+  display: block;
+  font-size: 20px;
+  top: 5px;
+  transform: rotate(-45deg);
+  padding-right: 30px;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  z-index: 101;
+}
+
+.items-box-body {
+  background-color: white;
+  padding: 16px 16px 16px 16px;
+  .items-box-name {
+    height: 48px;
+    line-height: 1.5;
+    overflow: hidden;
+    width: 181px;
+  }
+  .font-2 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .items-box-num {
+    margin-top: 1px;
+    width: 181px;
+  }
+}
+
+.items-box-price {
+  float: left;
+}
+
+.font-5 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3em;
+}
+
+.items-box-likes {
+  float: right;
+}
+
+.items-box-likes > .gray {
+  color: gray;
+}
+
+.items-box-tax {
+  display: block;
+  font-size: 10px;
+  font-weight: 100;
+}

@@ -1,0 +1,66 @@
+<%= render "shared/header" %>
+<div class="l-container clearfix">
+  <div class="l-content">  
+    <section class="l-chapter-container mypage-bank-account">
+      <h2 class="l-chapter-head">振込申請して現金を受け取る</h2>    
+      <form action="https://www.mercari.com/jp/mypage/sales/deposit/" method="POST" class="l-single-inner deposit-form" novalidate>
+        <div class="l-single-content">
+          <div class="deposit-preview">
+            <h3>振込先</h3>
+            <div><a href="/mains/sales_tra_account_register/">編集</a></div>
+          </div>
+          <ul class="table-defalt">
+            <li class="row-default">
+              <div class="cell-default c-50">銀行</div>
+              <div class="cell-default"></div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">口座種別</div>
+              <div class="cell-default">
+                <span>
+                </span>
+              </div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">支店コード</div>
+              <div class="cell-default"></div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">口座番号</div>
+              <div class="cell-default"></div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">口座名義(セイ)</div>
+              <div class="cell-default"></div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">口座名義(メイ)</div>
+              <div class="cell-default"></div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">住所氏名</div>
+              <div class="cell-default">
+              </div>
+            </li>
+            <li class="row-default">
+              <div class="cell-default c-50">生年月日</div>
+              <div class="cell-default">
+              </div>
+            </li>
+          </ul>
+          <button type="submit" class="btn-default btn-red" disabled>次へ</button>
+          <div class="form-group">
+            <p class="contact-info-text">※登録された住所氏名と売上金の振込口座名義が一致しない場合、振込申請をすることはできません。<br />※ご登録の口座が、家族名義の口座や、婚姻等による改姓等のため名義が異なる場合、「メニュー>問い合わせ>売上の振込申請について>お問い合わせする」より、お問い合わせください。</p>
+          </div>
+          <input type="hidden" name="bank_id" value="">
+          <input type="hidden" name="bank_name" value="">
+          <input type="hidden" name="__csrf_value" value="59dd19a3c6cf4bb8328ed25014448cb9bda6e03b6e6f3422f663431a6692bfbafc839b0356682fc8ff6ee1c0be330296ed735fddadafe242e80d8eec949f61af7">
+        </div>
+    </form>
+  </section>
+</div>
+<%= render "shared/sidebar" %>
+</div>
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>
+

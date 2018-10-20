@@ -1,0 +1,46 @@
+/*mypage/news*/
+
+.news-list {
+  li {
+    &:first-child {
+      border: 0;
+    }
+    border-top: 1px solid #eee;
+  }
+  a {
+    padding: 40px;
+    position: relative;
+    display: block;
+    color: #333;
+  }
+}
+
+.news-date {
+  color: #aaa;
+  .icon-time {
+    margin: 0 8px 0 0;
+    vertical-align: top;
+    font-size: 14px;
+  }
+}
+
+.news-list h3 {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.news-private {
+  background: #ea352d;
+}
+
+.form-require, .form-arbitrary, .message-is-seller, .news-private {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}

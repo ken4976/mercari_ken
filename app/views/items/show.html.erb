@@ -1,0 +1,283 @@
+<%= render "shared/header" %>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="item-box-container">
+      <h1 class="item-name"><%= @item.name %></h1>
+      <div class="item-main-content clearfix">
+        <div class="item-photo">
+          <div class="owl-carousel owl-loaded owl-drag">
+            <% if @item.buyer_id && @item.seller_id? %>
+              <div class="item-sold-out-badge">
+              </div>
+            <% end %>
+            <!-- 以下js使用 -->
+            <div class="owl-item-inner set" data-thumbnail-class-name="">
+              <% @item.images.each_with_index do |content, i| %>
+               <% i = 'image' + "#{i}" %>
+               <%= image_tag content.image, id: i ,class: "owl-lazy active-image" %>
+              <% end %>
+            </div>
+            <div class="owl-nav disabled"></div>
+            <div class="owl-dots">
+              <div class="owl-dot-inner" data-thumbnail-class-name="">
+                <% @item.images.each_with_index do |content, i| %>
+                <% i = 'thumb' + "#{i}" %>
+                 <%= image_tag content.image, id: i, class: "owl-lazy" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+          <section class="visible-sp">
+            <table class="item-detail-table">
+              <tr>
+                <th class="table-1-2">出品者</th>
+                <td>
+                  <a href=""><%= @item.seller.nickname %></a>
+                  <div>
+                    <div class="item-user-ratings">
+                      <i class="material-icons">sentiment_very_satisfied</i>
+                      <span>161</span>
+                    </div>
+                    <div class="item-user-ratings">
+                      <i class="material-icons">sentiment_neutral</i>
+                      <span>4</span>
+                    </div>
+                    <div class="item-user-ratings">
+                      <i class="material-icons">sentiment_very_dissatisfied</i>
+                      <span>0</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>カテゴリー</th>
+                <td>
+                  <a href="https://www.mercari.com/jp/category/2/">
+                    <div><%= @item.category.parent_category %></div>
+                  </a>
+                  <a href="https://www.mercari.com/jp/category/33/">
+                    <div class="item-detail-table-sub-category">
+                    <i class="material-icons">chevron_right</i><span>小物</span>
+                    </div>
+                  </a>
+                  <a href="https://www.mercari.com/jp/category/345/">
+                    <div class="item-detail-table-sub-sub-category">
+                    <i class="material-icons">chevron_right</i><span>その他</span>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>ブランド</th>
+                <td>
+                  <a href="">
+                    <div>
+                      <%= @item.brand.brand %>
+                    </div>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <th>商品のサイズ</th>
+                <td><%= @item.size.size %></td>
+              </tr>
+              <tr>
+                <th>商品の状態</th>
+                <td><%= @item.condition_i18n %></td>
+              </tr>
+              <tr>
+                <th>配送料の負担</th>
+                <td><%= @item.shipping_payer_i18n %></td>
+              </tr>
+              <tr>
+                <th>配送の方法</th>
+                <td><%= @item.shipping_method_i18n %></td>
+              </tr>
+              <tr>
+                <th>配送元地域</th>
+                <td>
+                  <a href=""><%= @item.area.area %></a>
+                </td>
+              </tr>
+              <tr>
+                <th>発送日の目安</th>
+                <td><%= @item.days_to_ship_i18n %></td>
+              </tr>
+            </table>
+          </div>
+
+        <div class="item-price-box text-center">
+          <span class="item-price bold">¥ <%= number_with_delimiter(@item.price) %></span>
+          <span class="item-tax"> (税込)</span>
+          <span class="item-shipping-fee">送料込み</span>
+        </div>
+        <% if @item.buyer_id? && @item.seller_id? %>
+            <div class="item-buy-btn disabled f18-24">売り切れました</div>
+        <% else %>
+          <%= link_to "/purchase_pre/items/#{@item.id}" do %>
+            <div class="item-buy-btn btn-red f18-24">購入画面に進む</div>
+          <% end %>
+        <% end %>
+        <div class="item-description f14">
+          <p class="item-description-inner">
+            <%= @item.text %>
+          </p>
+        </div>
+
+      <div class="item-button-container clearfix">
+        <div class="item-button-left">
+          <button type="button" name="like!" data-toggle="like" data-id="m17702910592" data-ga="element" data-ga-category="LIKE" data-ga-label="like!" class="item-button item-button-like">
+            <i class="far fa-heart gray"></i>
+            <span>いいね!</span>
+            <span data-num="like" class="fade-in-down">6</span>
+          </button>
+          <a href="" data-modal="report-item" data-open="modal" class="item-button item-button-report clearfix">
+            <i class="far fa-flag"></i>
+            <span>不適切な商品の報告</span>
+          </a>
+          <input type="hidden" name="like_add_url" value="https://www.mercari.com/jp/like/add/m17702910592/">
+          <input type="hidden" name="like_del_url" value="https://www.mercari.com/jp/like/delete/m17702910592/">
+          <input type="hidden" name="__csrf_value" value="62cdce56977b4de039d37f3465758660ec76d9d0d6fd30f557d33f530c64bc311107af8fa3a08fb1fd73a9410ee48d02c692d85a0066f15e2ec6190264aeed43d">
+        </div>
+        <div class="item-button-right">
+          <a href="https://www.mercari.com/jp/safe/description/" target="_blank">
+            <i class="fa fa-lock"></i>
+            <span>あんしん・あんぜんへの取り組み</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="item-detail-message">
+      <div class="message-container">
+        <div class="message-content">
+          <ul class="message-items">
+            <li class="clearfix">
+              <a href="https://www.mercari.com/jp/u/731864756/" class="message-user">
+                <figure>
+                  <div>
+                    <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/members/731864756.jpg?1404728044" alt="">
+                  </div>
+                  <figcaption class="bold">
+                  mipo
+                  </figcaption>
+                </figure>
+              </a>
+              <div class="message-body">
+                <div class="message-body-text">はじめまして、こんにちは。こちらの商品購入できたらと思っているのですが2500円にお値下げは難しいでしょうか？誠に勝手なお願いではございますがご検討のほどよろしくお願いいたします。</div>
+                <div class="message-icons clearfix">
+                  <time class="message-icon-left">
+                    <i class="tiny material-icons">access_time</i>
+                    <span>3 時間前</span>
+                  </time>
+                  <div class="message-icon-right">
+                    <form action="https://www.mercari.com/jp/comment/report/m17702910592/1771592636/" method="POST">
+                      <button type="submit">
+                        <i class="far fa-flag"></i>
+                      </button>
+                      <input type="hidden" name="redirect_url_key" value="item_detail">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+            <a href="https://www.mercari.com/jp/u/198095631/" class="message-user">
+              <figure>
+                <div>
+                  <img src="//static-mercari-jp-imgtr2.akamaized.net/thumb/members/198095631.jpg?1487846885" alt="">
+                </div>
+                <figcaption class="bold">
+                  ダイコン
+                </figcaption>
+              </figure>
+              <div class="message-is-seller ">出品者</div>
+            </a>
+            <div class="message-body">
+              <div class="message-body-text">コメントありがとうございます。<br />
+              靴は送料が結構するので…2650円でいかがですか？すぐに専用ページにさせていただきます。</div>
+              <div class="message-icons clearfix">
+                <time class="message-icon-left">
+                  <i class="tiny material-icons">access_time</i>
+                  <span>1 時間前</span>
+                </time>
+                <div class="message-icon-right">
+                  <form action="https://www.mercari.com/jp/comment/report/m17702910592/1771713269/" method="POST">
+                    <button type="submit"><i class="far fa-flag"></i></button>
+                    <input type="hidden" name="redirect_url_key" value="item_detail">
+                  </form>
+                </div>
+              </div>
+            </div>
+            </li>
+          </ul>
+         </div>
+        <div class="message-content">
+            <form action="https://www.mercari.com/jp/comment/add/" method="POST" class="message-form">
+              <p>相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。</p>
+              <input type="hidden" name="item_id" value="m17702910592">
+              <input type="hidden" name="redirect_url_key" value="item_detail">
+              <textarea type="text" name="body" value="" class="textarea-default" disabled></textarea>
+              <button type="submit" class="message-submit btn-default btn-gray" disabled>
+                <span>売り切れのためコメントできません</span>
+              </button>
+            </form>
+        </div>
+        <ul class="nav-item-link-prev-next clearfix">
+          <li class="nav-item-link-prev">
+            <a href="https://item.mercari.com/jp/m77887037103/">
+              <i class="material-icons">navigate_before</i>
+              <span>半襟 化繊 ピンクグレー格子</span>
+            </a>
+          </li>
+          <li class="nav-item-link-next">
+            <a href="https://item.mercari.com/jp/m18301091063/">
+              <span>ｎｅｗリラックスリブｔｅｅ</span>
+              <i class="material-icons">navigate_next</i>
+            </a>
+          </li>
+        </ul>
+        <div class="item-social-media-box">
+            <div class="text-center">
+              <div class="fb-save" data-uri="product://113299479059860/m17702910592"></div>
+            </div>
+            <ul class="social-media-box">
+              <li>
+                <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm17702910592%2F" target="_blank" class="share-btn" data-window-name="facebook_window">
+                  <i class="icon-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="http://twitter.com/share?count=horizontal&amp;original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm17702910592%2F&amp;text=mipo%E3%81%95%E3%82%93%E5%B0%82%E7%94%A8%20%E3%83%8A%E3%82%A4%E3%82%AD%E2%80%A6%20%28%C2%A5%202%2C650%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm17702910592%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89" target="_blank" class="share-btn" data-window-name="twitter_window">
+                  <i class="icon-twitter"></i>
+                </a>
+              </li>
+              <li class="social-hidden-item">
+                <a href="http://line.me/R/msg/text/?mipoさん専用 ナイキ ブレザー ミッド ナイキsb 28センチ%20%7C%20%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%0D%0Ahttps://item.mercari.com/jp/m17702910592/" target="_blank">
+                  <i class="icon-line"></i>
+                </a>
+              </li>
+              <li>
+                <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm17702910592%2F&amp;media=https%3A%2F%2Fstatic-mercari-jp-imgtr2.akamaized.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm17702910592_1.jpg%3F1494669182&amp;description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20mipo%E3%81%95%E3%82%93%E5%B0%82%E7%94%A8%20%E3%83%8A%E3%82%A4%E3%82%AD%20%E3%83%96%E3%83%AC%E3%82%B6%E3%83%BC%20%E3%83%9F%E3%83%83%E3%83%89%20%E3%83%8A%E3%82%A4%E3%82%ADsb%2028%E3%82%BB%E3%83%B3%E3%83%81%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA" target="_blank" class="share-btn" data-window-name="pinterest_window">
+                  <i class="icon-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="l-side">
+    <div class="l-visible-large">
+      <a href="https://itunes.apple.com/jp/app/id667861049?l=ja&amp;mt=8" target="_blank" class="side-banner">
+        <img src="//www-mercari-jp.akamaized.net/assets/img/common/jp/side_banner.jpg?3276806293" alt="Download Mercari Now">
+      </a>
+    </div>
+  </div>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

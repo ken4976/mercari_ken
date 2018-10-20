@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <title>Mercari</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="single-container">
+      <%= render "shared/single-header"%>
+      <main class="single-main">
+        <section class="l-single-container buy-item-container">
+          <h2 class="l-single-head">購入を確定しますか？</h2>
+          <section class="buy-content buy-item">
+            <div class="buy-content-inner">
+              <h3 class="buy-item-image">
+                <% @item.images.first(1).each do |content| %>
+                  <%= image_tag content.image, class: "owl-lazy active-image" %>
+                <% end %>
+                <!-- <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m82430140965_1.jpg?1536235609" class="lazyload" alt=""> -->
+              </h3>
+              <p class="buy-item-name bold"><%= @item.name %></p>
+              <%= form_for @item, :url => {:action => 'update'} do |f| %>
+                <%= f.hidden_field :buyer_id, value: current_user.id %>
+                  ¥ <%= number_with_delimiter(@item.price) %>
+                  <span class="item-shipping-fee f14 bold">送料込み</span>
+                </p>
+                <ul class="buy-accordion not-have">
+                  <li class="accordion-parent">
+                    <div class="accordion-toggle">
+                      ポイントはありません
+                    </div>
+                  </li>
+                </ul>
+                <ul class="buy-price-table">
+                  <li class="buy-price-row buy-you-pay bold clearfix">
+                    <div class="buy-price-cell">支払い金額</div>
+                    <div class="buy-price-cell">
+                      <span>¥ <%= @item.price %></span>
+                    </div>
+                  </li>
+                </ul>
+                <button type="submit" class="btn-default btn-red bold">購入する</button>
+              <% end %>
+            </div>
+          </section>
+          <section class="buy-content buy-user-info">
+            <div class="buy-content-inner">
+              <h3>配送先 </h3>
+              <address class="buy-user-info-text">
+                〒<%= current_user.address.postal_code %>
+                <br>
+                <%= current_user.address.area %> <%= current_user.address.city %>
+                <%= current_user.address.address1 %> <%= current_user.address.address2 %>
+                <br>
+                xx xx
+              </address>
+              <p class="buy-user-info-text"> 
+              </p>
+              <a href="https://www.mercari.com/jp/transaction/address/m82430140965/" class="buy-user-info-fix">
+                <span>変更する</span>
+                <i class="material-icons arrow-size">keyboard_arrow_right</i>
+              </a>
+            </div>
+          </section>
+          <section class="buy-content buy-user-info" data-buy="pay-method">
+            <div class="buy-content-inner">
+              <h3>支払い方法</h3>
+              <p class="buy-user-info-text">
+                ************3022
+                <br>
+                xx / xx
+                <figure>
+                  <img src="//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2834800195" width="26" height="20" alt="jcb">
+                </figure>
+              </p>
+              <a href="/tests/index" class="buy-user-info-fix">
+                <span>変更する</span>
+                <i class="material-icons arrow-size">keyboard_arrow_right</i>
+              </a>
+            </div>
+          </section>
+        </section>
+      </main>
+      <%= render "shared/single-footer"%>
+    </div>
+  </body>
+
+</html>

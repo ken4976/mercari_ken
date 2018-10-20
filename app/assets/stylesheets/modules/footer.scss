@@ -1,0 +1,108 @@
+.header {
+  height: 150px;
+  background-color:green;
+}
+
+.l-container {
+  min-height: 1600px; //mura comment out
+  width: 1020px;
+  margin: 40px auto 0;
+  background: #f5f5f5;
+  padding: 0 0 40px; //mura追加 
+}
+
+.global-footer {
+  position: relative;
+  height: 700px;
+  padding: 60px 0;
+  text-align: center;
+  background: #212121;
+  color: #fff;
+  nav {
+    width: 1020px;
+    margin: 0 auto;
+    ul {
+      list-style: none;
+    }
+  }
+  li {
+    color: #333;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.download-app {
+  display: none;
+  text-align: center;
+  a {
+    display: block;
+  }
+  img {
+    margin: 0 8px 0 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.footer-cell {
+  display: inline-block;
+  width: 23%;
+  margin: 0 2% 0 0;
+  vertical-align: top;
+  li {
+    margin: 16px 0 0;
+  }
+  li:first-child {
+    margin: 24px 0 0;
+  }
+  a {
+    display: block;
+  }
+}
+
+.footer-head {
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-cell:last-child {
+  margin: 0;
+}
+
+.footer-nav-lang {
+  a {
+    width: auto;
+    margin: 0 auto;
+    opacity: 0.3;
+  }
+  img {
+    margin: 0 8px 0 0;
+  }
+  a.active {
+    opacity: 1.0;
+  }
+}
+
+.footer-logo {
+  display: block;
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+.footer-copyright {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.footer-copyright small {
+  font-size: 14px;
+}

@@ -1,0 +1,2 @@
+module InProgress::ItemsHelper
+end

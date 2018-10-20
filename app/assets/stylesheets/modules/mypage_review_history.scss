@@ -1,0 +1,29 @@
+/*mypage/review/history*/
+
+.review-history-tabs li {
+  width: 25%;
+}
+
+.icon-good {
+  color: #ef5185;
+}
+
+.icon-good:before {
+  content: '\e015';
+}
+
+.icon-normal {
+  color: #fba933;
+}
+
+.icon-normal:before {
+  content: '\e020';
+}
+
+.icon-bad {
+  color: #6ab5d8;
+}
+
+.icon-bad:before {
+  content: '\e007';
+}

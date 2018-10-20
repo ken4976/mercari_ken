@@ -1,0 +1,25 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">プロフィール</h2>
+      <%= form_for([:profile, current_user], html: {class: ''}) do |f| %>
+        <div class="setting-profile-icon">
+          <figure>
+            <img src="//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png" width="60" height="60">
+          </figure>
+          <!-- <input type="text" value="k-i" name="nickname" placeholder="例)AYA☆セール中" class="input-default"> -->
+          <%= f.text_field :nickname, autofocus: true, class: 'input-default', placeholder: "例)AYA☆セール中" %>
+        </div>
+        <div class="setting-profile-content">
+          <%= f.text_area :introduction, placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", class: 'textarea-default' %>
+          <%= f.submit "変更する", class: 'btn-default btn-red' %>
+        </div>
+      <% end %>
+    </section>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

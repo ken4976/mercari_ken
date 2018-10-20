@@ -1,0 +1,92 @@
+<div class="l-side">
+  <section class="l-side-container">
+    <h3 class="transact-info-head">取引情報</h3>
+    <div class="transact-info-inner">
+      <ul class="transact-info-table">
+              <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">商品</span>
+          <ul class="transact-info-table-cell">
+            <li>
+              <a href="https://static-mercari-jp-imgtr2.akamaized.net/item/detail/orig/photos/m38566204988_1.jpg?1537838737">
+                <% @item.images.first(1).each do |content| %>
+                  <%= image_tag content.image, class: "lazyload", alt: "" %>
+                <% end %>
+                
+                <div class="transact-info-item bold">
+                  <%= @item.name %>
+                  <br>
+                  ¥ <%= number_with_delimiter(@item.price) %>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">送料</span>
+          <ul class="transact-info-table-cell">
+            <li>
+              送料込み(出品者負担)
+            </li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">販売手数料</span>
+          <ul class="transact-info-table-cell">
+            <li>¥ <%= @item.selling_fee.floor %></li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">配送料</span>
+          <ul class="transact-info-table-cell">
+            <li>¥ 380</li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">販売利益</span>
+          <ul class="transact-info-table-cell">
+            <li>
+              ¥ <%= @item.benefit_from_selling.floor %>
+            </li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">購入日時</span>
+          <ul class="transact-info-table-cell">
+            <li><%= @item.updated_at.to_s(:purchased_at) %></li>
+          </ul>
+        </li>
+        <li class="transact-info-table-row">
+          <span class="transact-info-table-cell">商品ID</span>
+          <ul class="transact-info-table-cell">
+            <li>m38566204988</li>
+          </ul>
+        </li>   
+      </ul>
+  </section>
+
+  <section class="l-side-container">
+    <h3 class="transact-info-head">購入者情報</h3>
+    <div class="transact-info-inner">
+      <a href="#" class="transaction-user-icon">
+        <figure>
+          <figure>
+            <div>
+              <img src="https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage.png" alt="" width="40">
+            </div>
+          <figcaption class="bold">
+            <div class="transact-user-name">
+              <%= @item.seller.nickname %>
+            </div>
+          </figcaption>
+        </figure>
+        <i class="material-icons">keyboard_arrow_right</i>
+      </a>
+    </div>
+    <br>
+  </section>
+  <div class="l-visible-large">
+    <a href="https://itunes.apple.com/jp/app/id667861049?l=ja&amp;mt=8" target="_blank" class="side-banner">
+      <img src="//www-mercari-jp.akamaized.net/assets/img/common/jp/side_banner.jpg?3276806293" alt="Download Mercari Now">
+    </a>
+  </div>
+</div>

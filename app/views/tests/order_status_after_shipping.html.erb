@@ -1,0 +1,169 @@
+<%= render "shared/header"%>
+<main class="l-container-item-status clearfix">
+  <div class="l-content">  
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">取引画面</h2>
+      <div class="transact-attention">
+        <h3><i class="material-icons">sentiment_very_satisfied</i><span>受取評価をしてください</span></h3>
+        <p>商品が発送されました。商品が到着したら、出品者の評価をしてください。</p>
+      </div>
+      <ul class="transact-guide text-right">
+        <li>
+          <a href="/jp/help_center/category/5/" target="_blank"><span>購入した後の流れ</span><i class="material-icons">keyboard_arrow_right</i></a>
+        </li>
+        <li>
+          <a href="/jp/help_center/category/1/" target="_blank"><span>購入者のよくある質問</span><i class="material-icons">keyboard_arrow_right</i></i></a>
+        </li>
+      </ul>
+                    
+      <section class="l-single-inner yuuyuu-content">
+        <h3>配送状況</h3>
+        <nav class="single-container__header__progress-bar signup-bar">
+          <ol class="progress-dots progress-bar clearfix">
+            <li class="progress-dots__a-dot through">
+              発送済み
+              <div class="progress-status" id="aa"></div>
+            </li>
+            <li class="progress-dots__a-dot active">
+              輸送中
+              <div class="progress-status"></div>
+            </li>
+            <li class="progress-dots__a-dot">
+              配達中
+              <div class="progress-status"></div>
+            </li>
+            <li class="progress-dots__a-dot">
+              受取
+              <div class="progress-status-last"></div>
+            </li>
+          </ol>
+        </nav>
+        <p>引受</p>
+        <p>
+          <span class="bold">※ゆうゆうメルカリ便に関するお問い合わせは<a href="https://www.mercari.com/jp/mypage/support/">こちら</a>よりお願いします</span>
+          <br>
+          （日本郵便には、直接お問い合わせされないようお願いします）
+        </p>
+      </section>  
+      <form action="https://www.mercari.com/jp/transaction/review/m16768084648/" method="POST" class="transact-form-review">
+        <input type="hidden" name="__csrf_value" value="faa90679e87a91710ff5df1790f7328c29beed3e0211519fcd6b7ae5e27bf7071b5e4fd487f950ed3003c79f4d54ac205ed95cc5189f534da75d1cc770faf1d01">
+        <div class="checkbox-default">
+          <input type="checkbox" name="transaction_delivered" id="transaction_delivered" value="1" >
+          <!-- <i class="icon-check"></i> -->
+          <label for="transaction_delivered">商品の中身を確認しました。</label>
+        </div>            
+        <ul class="transact-review-list clearfix">
+          <li>
+            <input type="radio" name="fame" id="face1" value="good">
+            <div class="transact-review-icon">
+              <i class="material-icons">sentiment_very_satisfied</i>
+              <label for="face1">
+                良い
+              </label>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="fame" id="face2" value="normal">
+            <div class="transact-review-icon neutral-icon">
+              <i class="material-icons">sentiment_neutral</i>
+              <label for="face2">
+                普通
+              </label>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="fame" id="face3" value="bad">
+            <div class="transact-review-icon bad-icon">
+              <i class="material-icons">sentiment_very_dissatisfied</i>
+              <label for="face3">
+                悪い
+              </label>
+            </div>
+          </li>
+        </ul>
+        <p>評価のコメントを記入しましょう。</p>
+        <textarea name="message" placeholder="コメントはなくても構いませんが、お礼のメッセージなどを書くと喜ばれます。" class="textarea-default"></textarea>
+        <a href="/tests/order_status_waiting/" class="btn-default btn-red">評価を投稿する</a>
+        <!-- <button type="submit" class="btn-default btn-red" disabled>
+          評価を投稿する
+        </button> -->
+      </form>
+      <div class="message-container">  
+        <div class="message-content">                                                  
+          <form action="https://www.mercari.com/jp/transaction/message/m16768084648/" method="POST" class="message-form">
+            <input type="hidden" name="__csrf_value" value="faa90679e87a91710ff5df1790f7328c29beed3e0211519fcd6b7ae5e27bf7071b5e4fd487f950ed3003c79f4d54ac205ed95cc5189f534da75d1cc770faf1d01">
+            <p>取引メッセージの内容は、必要に応じて事務局で確認しています</p>
+            <input type="hidden" name="item_id" value="m16768084648">
+            <textarea type="text" name="body" value="" class="textarea-default" ></textarea>
+            <button type="submit" class="message-submit btn-default btn-gray" >
+              <span>取引メッセージを送る</span>
+            </button>
+          </form>
+        </div>
+      <!-- <aside
+        class="modal"
+        data-modal="delete-comment"
+        data-close="modal">
+        <div class="modal-inner modal-banner">
+          <div class="modal-body">
+            <div class="modal-head bold">確認</div>
+            <div data-comment="body"></div>
+            <br>
+            本当にこのコメントを削除してよろしいですか？
+          </div>
+
+          <form action="https://www.mercari.com/jp/comment/delete/" method="POST">
+            <div class="clearfix">
+              <div class="modal-btn modal-btn-cancel" data-close="modal">キャンセル</div>
+              <button type="submit" class="modal-btn modal-btn-submit">
+                削除する
+              </button>
+            </div>
+            <input type="hidden" name="item_id" value="m16768084648">
+            <input type="hidden" name="comment_id" value="">
+            <input type="hidden" name="__csrf_value" value="faa90679e87a91710ff5df1790f7328c29beed3e0211519fcd6b7ae5e27bf7071b5e4fd487f950ed3003c79f4d54ac205ed95cc5189f534da75d1cc770faf1d01">
+          </form>
+
+        </div>
+      </aside> -->
+      </div>
+      <div class="message-content">
+        ※お困りの際は<a href="/jp/help_center/category/1/" target="_blank">よくある質問</a>をご確認ください。
+      </div>
+  　</section>
+  </div>
+<!-- <aside class="modal" data-modal="seller-cancel" data-close="modal">
+  <div class="modal-inner modal-banner">
+    <div class="modal-body">
+      <div class="modal-head bold">取引をキャンセルしますか？</div>
+      キャンセル後、商品は出品停止状態になりますので、再度出品をお願いいたします
+    </div>
+    <div class="clearfix">
+      <div class="modal-btn modal-btn-cancel" data-close="modal">いいえ</div>
+      <form action="/jp/transaction/seller_cancel/done/m16768084648/" method="POST" novalidate="novalidate">
+        <input type="hidden" name="__csrf_value" value="faa90679e87a91710ff5df1790f7328c29beed3e0211519fcd6b7ae5e27bf7071b5e4fd487f950ed3003c79f4d54ac205ed95cc5189f534da75d1cc770faf1d01">
+        <button type="submit" class="modal-btn modal-btn-submit">はい</button>
+      </form>
+    </div>
+  </div>
+</aside>
+<aside class="modal" data-modal="buyer-cancel" data-close="modal">
+  <div class="modal-inner modal-banner">
+    <div class="modal-body">
+      <div class="modal-head bold">取引キャンセルを依頼しますか</div>
+      事務局にて取引内容を確認後、対応してまいります
+      </div>
+      <div class="clearfix">
+        <div class="modal-btn modal-btn-cancel" data-close="modal">キャンセル</div>
+        <form action="/jp/transaction/buyer_cancel/done/m16768084648/" method="POST" novalidate="novalidate">
+          <input type="hidden" name="__csrf_value" value="faa90679e87a91710ff5df1790f7328c29beed3e0211519fcd6b7ae5e27bf7071b5e4fd487f950ed3003c79f4d54ac205ed95cc5189f534da75d1cc770faf1d01">
+          <button type="submit" class="modal-btn modal-btn-submit">はい</button>
+        </form>
+      </div>
+    </div>
+</aside>
+  </div> 
+  </div> -->
+  <%= render "shared/order_status_sidebar"%>
+</main>
+<%= render "shared/footer" %>

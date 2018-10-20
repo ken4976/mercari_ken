@@ -1,0 +1,73 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="mypage-tab-container">
+      <h2 class="mypage-tab-head">評価一覧</h2>
+      <ul class="review-history-tabs">
+        <li class="">
+          <h3>
+            <%= link_to review_history_user_path(current_user) do %>
+              <div>
+                <i class="icon-good">
+                </i>
+                 すべて
+              </div>
+            <% end %>
+          </h3>
+        </li>
+        <li class="">
+          <h3>
+            <%= link_to review_history_great_user_path(current_user) do %>
+              <div>
+                <i class="icon-good">
+                </i>
+                 良い
+              </div>
+            <% end %>
+          </h3>
+        </li>
+        <li class="active">
+          <h3>
+            <a href="#mypage-tab-transaction-old" data-toggle="tab">
+              <div>
+                <i class="icon-normal">
+                </i>
+                 普通
+              </div>
+            </a>
+          </h3>
+        </li>
+        <li class="">
+          <h3>
+            <%= link_to review_history_poor_user_path(current_user) do %>
+              <div>
+                <i class="icon-good">
+                </i>
+                 悪い
+              </div>
+            <% end %>
+          </h3>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <ul class="mypage-item-list">
+          <li class="mypage-item-not-found bold">
+            評価はまだありません
+          </li>
+        </ul>
+      </div>
+    </section>
+    <ul class="mypage-history pager">
+      <li class="pager-prev pager-cell">
+        <a href=""><i class="fas fa-angle-left"></i></a>
+      </li>
+      <li class="pager-next-fix pager-cell">
+        <a href=""><i class="fas fa-angle-right"></i></a>
+      </li>
+    </ul>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

@@ -1,0 +1,55 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="mypage-tab-container-notification-todo">
+      <ul class="mypage-tabs">
+        <li class="">
+          <h3>
+            <%= link_to "お知らせ", notification_user_path(current_user) %>
+          </h3>
+        </li>
+        <li class="active">
+          <h3>
+            <%= link_to "やることリスト", todo_user_path(current_user) %>
+          </h3>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <ul id="mypage-tab-notification" class="mypage-item-list tab-pane">
+          <li class="mypage-item-not-found bold">お知らせの商品がありません</li>
+        </ul>
+        <ul id="mypage-tab-todo" class="mypage-item-list tab-pane active">
+          <li class="mypage-item-not-found bold">現在、やることリストはありません</li>
+        </ul>
+      </div>
+    </section>
+    <aside class="modal" data-modal="banner" data-close="modal">
+      <div class="modal-inner modal-banner">
+        <div class="modal-banner-eye-catch">
+          <img src="//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?3913698104" alt="">
+          <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3913698104" alt="">
+        </div>
+        <div class="modal-banner-body">
+          <h2>今すぐ無料ダウンロード！</h2>
+          <p class="bold">全ての機能を使えるスマホアプリはこちら！</p>
+          <div class="modal-banner-app clearfix">
+            <a href="https://itunes.apple.com/jp/app/id667861049?l=ja&amp;mt=8" target="_blank" class="pull-left">
+              <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?3913698104" alt="">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.kouzoh.mercari&amp;hl=ja" target="_blank" class="pull-left">
+              <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?3913698104" alt="">
+            </a>
+          </div>
+          <a href="" class="modal-banner-app-open" data-toggle="open-app" data-url-scheme="mercari://" data-action="app/launch" data-play-id="com.kouzoh.mercari">
+            アプリで開く
+          </a>
+        </div>
+        <i class="icon-close" data-close="modal"></i>
+      </div>
+    </aside>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

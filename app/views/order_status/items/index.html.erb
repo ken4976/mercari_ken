@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<div class="l-container">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">売上履歴</h2>
+      <ul class="mypage-item-list">
+        <% @items.each do |item| %>
+          <%= render partial: "index", locals: { item: item } %>
+        <% end %>
+      </ul>
+    </section>
+  </div>
+<%= render "shared/sidebar" %>
+</div>
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

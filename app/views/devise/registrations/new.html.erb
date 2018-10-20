@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="single-container">
+    <header class="single-header">
+      <h1>
+        <a href="https://www.mercari.com/jp/">
+          <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?249128278" alt="mercari">
+        </a>
+      </h1>
+    </header>
+      <main class="single-main">
+      <section class="l-single-container">
+    <h2 class="l-chapter-head">会員情報入力</h2>
+      <div class="l-single-content">
+
+        <button id="facebook-login" class="btn-default btn-sns btn-sns-facebook">
+                <i class="icon-facebook"></i>
+                <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, class: "post" %>
+              </button>
+              <button id="google-login" class="btn-default btn-sns btn-sns-google">
+                <i class="icon-google-plus"></i>
+                Googleで登録
+              </button>
+<div class="form-group">
+          <%= f.label :nickname, "ニックネーム" %>
+         <span class="form-require">必須</span>
+          <%= f.text_field :nickname, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+</div>
+<div class="form-group">
+        <%= f.label :email, "メールアドレス" %>
+        <span class="form-require">必須</span>
+        <%= f.email_field :email, autofocus: true, class: 'input-default', placeholder: "PC・携帯どちらでも可" %>
+</div>
+<div class="form-group">
+      <%= f.label :password, "パスワード"%>
+      <span class="form-require">必須</span>
+        <%= f.password_field :password, autocomplete: "new-password", class: 'input-default' %>
+</div>
+<div class="form-group">
+        <%= f.label :password_confirmation, "パスワード(確認)" %> <span class="form-require">必須</span><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'input-default'%>
+</div>
+   <input type="hidden" value="" name="after_save_callback">
+                <div class="form-group">
+          <div class="g-recaptcha signup-recaptcha" data-sitekey="6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&amp;co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&amp;hl=ja&amp;v=v1538375507325&amp;size=normal&amp;cb=vy7rxndzguf" width="304" height="78" role="presentation" name="a-urvaj3gw8x3h" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                  </div>
+                      <button type="submit" class="btn-default btn-red btn-info">登録</button>
+                    </div>
+                  </section>
+                </main>
+              </div>
+  <% end %>
+</body>
+</html>
+

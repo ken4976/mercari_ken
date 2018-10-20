@@ -1,0 +1,112 @@
+.l-container-item-status {
+  min-height: 1000px; //mura comment out
+  width: 1020px;
+  margin: 40px auto 0;
+  background: #f5f5f5;
+  padding: 0 0 40px; //mura追加 
+}
+
+.yuuyuu-content {
+  text-align: center;
+  p {
+    margin: 16px 0 0;
+    line-height: 1.5;
+  }
+  .progress-bar {
+    margin: 24px 0 0;
+  }
+}
+
+.progress-bar {
+  ol {
+    margin: 0;
+  }
+  li {
+    &.active {
+      font-weight: 600;
+      color: #ea352d;
+    }
+    margin: 0 40px 0 0;
+    min-width: 60px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    min-width: 40px;
+    margin: 0 5% 0 0;
+    font-size: 12px;
+    color: #888;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.progress-status {
+  &:after:last-child {
+    opacity: 0;
+  }
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
+  &:before {
+    right: 50%;
+  }
+}
+
+.transact-form-review {
+  width: 280px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.checkbox-default {
+  position: relative;
+}
+
+.transact-review-list {
+  margin: 32px 0 0;
+  li {
+    position: relative;
+    float: left;
+    margin: 0 13px 0 0;
+  }
+}
+
+.transact-form-review {
+  > p {
+    margin: 32px 0 0;
+    font-size: 14px;
+  }
+  textarea {
+    width: 100%;
+    max-width: 280px;
+    margin: 8px 0 0;
+  }
+}
+
+.transact-review-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.transact-review-icon {
+  i {
+    margin: 14px 0 0;
+    font-size: 30px;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px 0 0;
+    cursor: pointer;
+  }
+}

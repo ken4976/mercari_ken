@@ -1,0 +1,29 @@
+<%= render "shared/header"%>
+<main class="l-container clearfix">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">クレジットカード登録</h2>
+      <div class="l-single-inner">
+        <section class="settings-add-card">
+          <div class="l-single-content">
+            <%= form_tag(action: :create, method: :post) do %>
+              <div class="btn-default submit_button">
+                 <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_7952daf3cca41a190d06666f" data-text="カード番号の登録" data-submit-text="カード番号を登録して閉じる"></script>
+              </div>
+            <% end %>
+          </div>
+        </section>
+        <div class="settings-not-regist">
+          <a href="#" target="_blank">
+            <span>支払い方法について</span>
+            <i class="icon-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <%= render "shared/sidebar" %>
+</main>
+
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

@@ -1,0 +1,74 @@
+  <%= render "shared/header"%>
+<div class="l-container">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">住所変更</h2>
+        <main class="single-main">
+  <%= form_for @address do |f| %>
+  <% if @address.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= pluralize(@address.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+        <div class="l-single-content">
+
+          <div class="form-group">
+           <%= f.label :family_name, "お名前" %>
+           <span class="form-require">必須</span>
+           <%= f.text_field :family_name, autofocus: true, class: 'input-default', placeholder: "例）メルカリ" %>
+           <%= f.text_field :first_name, autofocus: true, class: 'input-default', placeholder: "例）太郎" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :family_name, "お名前カナ" %>
+             <span class="form-require">必須</span>
+             <%= f.text_field :family_name_kana, autofocus: true, class: 'input-default', placeholder: "例）メルカリ" %>
+             <%= f.text_field :first_name_kana, autofocus: true, class: 'input-default', placeholder: "例）タロウ" %>
+          </div>
+
+
+            <div class="form-group">
+              <%= f.label :area, "都道府県" %>
+             <span class="form-require">必須</span>
+               <div class="select-wrap">
+                <%= f.select :area,[["北海道","北海道"],["青森県","青森県"],["岩手県","岩手県"],["宮城県","宮城県"],["秋田県","秋田県"],["山形県","山形県"],["福島県","福島県"],["茨城県","茨城県"],["栃木県","栃木県"],["群馬県","群馬県"],["埼玉県","埼玉県"],["千葉県","千葉県"],["東京都","東京都"],["神奈川県","神奈川県"],["新潟県","新潟県"],["富山県","富山県"],["石川県","石川県"],["福井県","福井県"],["山梨県","山梨県"],["長野県","長野県"],["岐阜県","岐阜県"],["静岡県","静岡県"],["愛知県","愛知県"],["三重県","三重県"],["滋賀県","滋賀県"],["京都府","京都府"],["大阪府","t大阪府"],["兵庫県","兵庫県"],["奈良県","奈良県"],["和歌山県","和歌山県"],["鳥取県","鳥取県"],["島根県","島根県"],["岡山県","岡山県"],["広島県","広島県"],["山口県","山口県"],["香川県","香川県"],["徳島県","徳島県"],["愛媛県","愛媛県"],["高知県","高知県"],["福岡県","福岡県"],["佐賀県","佐賀県"],["長崎県","長崎県"],["熊本県","熊本県"],["大分県","大分県"],["宮崎県","宮崎県"],["鹿児島県","鹿児島県"],["沖縄県","沖縄県"],["未定","未定"]], {}, class: 'select-default' %>
+              </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :postal_code, "郵便番号" %>
+           <span class="form-require">必須</span>
+            <%= f.text_field :postal_code, autofocus: true, class: 'input-default', placeholder: "例）123-4567" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :city, "市区町村" %>
+           <span class="form-require">必須</span>
+            <%= f.text_field :city, autofocus: true, class: 'input-default', placeholder: "例）横浜市緑区" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :address1, "番地" %>
+           <span class="form-require">必須</span>
+            <%= f.text_field :address1, autofocus: true, class: 'input-default', placeholder: "例）青山1-1-1" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :address2, "建物名" %>
+           <span class="form-require">任意</span>
+            <%= f.text_field :address2, autofocus: true, class: 'input-default', placeholder: "例）柳ビル103" %>
+          </div>
+            <%= f.submit "登録する", class: "btn-default btn-red" %>
+      </div>
+  <% end %>
+      </main>
+    </section>
+  </div>
+    <%= render "shared/sidebar" %>
+</div>
+  <%= render "shared/seller-button" %>
+  <%= render "shared/footer" %>

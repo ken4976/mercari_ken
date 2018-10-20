@@ -1,0 +1,27 @@
+<%= render "shared/header"%>
+
+<div class="l-container clearfix">
+
+<div class="l-content">
+  <section class="l-chapter-container">
+    <h2 class="l-chapter-head">プロフィール</h2>
+    <form action="">
+      <input type="hidden" name="__csrf_value" value="">
+      <div class="setting-profile-icon">
+        <figure>
+          <img src="https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png" width="60" height="60">
+        </figure>
+        <input type="text" value="" name="nickname" placeholder="例)AYA☆セール中" class="input-default">
+      </div>
+        <div class="setting-profile-content">
+          <textarea name="introduction" placeholder="例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪" class="textarea-default"></textarea>
+          <input type="hidden" value="https://www.mercari.com/jp/mypage/profile/" name="after_save_callback">
+          <button type="submit" class="btn-default btn-red">変更する</button>
+        </div>
+      </form>
+  </section>
+</div>
+
+<%= render "shared/sidebar" %>
+</div>
+<%= render "shared/seller-button" %>

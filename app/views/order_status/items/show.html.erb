@@ -1,0 +1,41 @@
+<%= render "shared/header"%>
+<main class="l-container-item-status clearfix">
+  <div class="l-content">
+  <section class="l-chapter-container">
+    <h2 class="l-chapter-head">取引画面</h2>
+      <div class="transact-attention">
+        <h3><i class="material-icons">check</i><span>取引が完了しました</span></h3>
+        <p>このたびはメルカリのご利用ありがとうございました</p>
+       </div>
+       <ul class="transact-guide text-right">
+        <li>
+          <a href="/jp/help_center/category/11/" target="_blank"><span>販売代金の受け取りについて</span>
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
+        </li>
+      </ul>
+      <div class="message-container">
+        <div class="message-content"> 
+          <form action="https://www.mercari.com/jp/transaction/message/m38566204988/" method="POST" class="message-form">
+            <input type="hidden" name="__csrf_value" value="0644e11ac11535f6ce17a85a24cf789dcfb1049d472209b13a8e9da33a515307a6ecb510ffa1d6c80c59470f9a493e48c506103a0118ad15071cc4ccc7f05d910">
+            <p>取引メッセージの内容は、必要に応じて事務局で確認しています</p>
+            <input type="hidden" name="item_id" value="m38566204988">
+            <textarea type="text" name="body" value="" class="textarea-default" ></textarea>
+            <button type="submit" class="message-submit btn-default btn-gray" >
+              <span>取引メッセージを送る</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="message-content">
+        ※お困りの際は
+          <a href="/jp/help_center/category/2/" target="_blank">
+            よくある質問
+          </a>
+        をご確認ください。
+      </div>
+    </section>
+  </div>
+  <%= render "shared/order_status_sidebar"%>
+</main>
+<%= render "shared/footer" %>

@@ -1,0 +1,77 @@
+    <div class="single-container">
+      <header class="single-header">
+        <h1>
+          <a href="https://www.mercari.com/jp/">
+            <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?255148577" alt="mercari">
+          </a>
+        </h1>
+      </header>
+      <main class="single-main">
+        <div class="login-panel">
+          <div class="login-no-account">
+            <p>アカウントをお持ちでない方はこちら</p>
+            <%= link_to '新規会員登録', new_user_registration_path %>
+          </div>
+          <div class="login-form-inner">
+
+            <button id="facebook-login" class="btn-default btn-sns btn-sns-facebook">
+              <i class="icon-facebook"></i>
+              <%= link_to "Facebookでログイン", user_facebook_omniauth_authorize_path, class: "post" %>
+            </button>
+            <button id="google-login" class="btn-default btn-sns btn-sns-google">
+              <i class="icon-google-plus"></i>
+              Googleでログイン
+            </button>
+          </div>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="login-form-inner">
+              <div class="form-group">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'login-input-text input-default', placeholder: "メールアドレス" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.password_field :password, autocomplete: "current-password", class: 'login-input-text input-default', placeholder: "パスワード" %>
+              </div>
+
+              <div class="form-group">
+                <div class="g-recaptcha login-captcha" data-sitekey="6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc">
+                  <div style="width: 304px; height: 78px;">
+                    <div>
+                      <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&amp;co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&amp;hl=ja&amp;v=v1538980283511&amp;size=normal&amp;cb=ozrpza3bv7uh" width="304" height="78" role="presentation" name="a-icysyfabculy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+                      </iframe>
+                    </div>
+                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="login-submit btn-default btn-red actions">
+                <%= f.submit "ログイン" %>
+              </div>
+              <%= link_to 'パスワードをお忘れの方', "#" %>
+            </div>
+          <% end %>
+        </div>
+      </main>
+      <footer class="single-footer">
+        <nav>
+          <ul class="clearfix">
+            <li>
+              <a href="https://www.mercari.com/jp/privacy/">プライバシーポリシー</a>
+            </li>
+            <li>
+              <a href="https://www.mercari.com/jp/tos/">メルカリ利用規約</a>
+            </li>
+            <li>
+              <a href="https://www.mercari.com/jp/tokutei/">特定商取引に関する表記</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="https://www.mercari.com/jp/" class="single-footer-logo">
+          <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?255148577" alt="mercari" width="80" height="65">
+        </a>
+        <p>
+          <small>© 2018 Mercari</small>
+        </p>
+      </footer>
+    </div>

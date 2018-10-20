@@ -1,0 +1,2 @@
+module Purchased::ItemsHelper
+end

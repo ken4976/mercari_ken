@@ -1,0 +1,36 @@
+.deposit-preview h3 {
+  display: inline-block;
+  font-size: 22px;
+}
+
+.deposit-preview div {
+  display: inline-block;
+  float: right;
+}
+
+.deposit-form .table-defalt {
+  margin: 16px 0 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-defalt {
+  display: table;
+  width: 100%;
+}
+
+.row-default {
+  display: table-row;
+}
+
+.cell-default {
+  display: table-cell;
+  padding: 16px 0;
+}
+
+.c-50 {
+  width: 50%;
+}
+
+.deposit-form .cell-default {
+    border-top: 1px solid #ccc;
+}

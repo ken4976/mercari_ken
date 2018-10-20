@@ -1,0 +1,81 @@
+<%= render "shared/header" %>
+<div class="l-container clearfix">
+  <div class="l-content">
+    <section class="l-chapter-container">
+      <h2 class="l-chapter-head">売上・振込申請</h2>
+      <ul class="mypage-nav-list">
+        <li>
+          <div class="mypage-nav-list-item clearfix">
+            <div class="l-left">
+              現在の売上金
+            </div>
+            <div class="l-right">
+                <!-- <% t = 0 %> -->
+                <% current_user.selling_items.each do |p|%>
+                <%= p %>
+                <% end %>
+              ¥ 
+            </div>
+          </div>
+        </li>
+        <li>
+          <%= link_to order_status_items_path, class: "mypage-nav-list-item clearfix" do %>
+          <div>
+            売上履歴
+          </div>
+          <div>
+            <i class="fas fa-angle-right"></i>
+          </div>
+          <% end %>
+        </li>
+        <li>
+          <a href="/mains/sales_tra_lim/" class="mypage-nav-list-item clearfix">
+            <div>
+              売上金の振込申請期限
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="l-chapter-container sales-transfer-second">
+      <ul class="mypage-nav-list">
+        <li>
+          <a href="/mains/sales_tra_bank/" class="mypage-nav-list-item clearfix">
+            <div>
+              振込申請して現金を受け取る
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/mains/sales_tra_history/" class="mypage-nav-list-item clearfix">
+            <div>
+              振込申請履歴
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/jp/help_center/category/11/" class="mypage-nav-list-item clearfix" target="_blank">
+            <div>
+              振込申請スケジュール
+            </div>
+            <div>
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+<%= render "shared/sidebar" %>
+</div>
+<%= render "shared/seller-button" %>
+<%= render "shared/footer" %>

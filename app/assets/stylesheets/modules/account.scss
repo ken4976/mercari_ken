@@ -1,0 +1,181 @@
+.single-container {
+  padding: 0 0 250px;
+  &__header {
+    height: 128px;
+    text-align: center;
+  }
+}
+
+.single-main__l-single-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  &__l-single-head { 
+    padding: 32px 16px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  &__l-single-inner {
+    padding: 64px;
+  }
+}
+
+.l-single-content {
+  max-width: 320px;
+  margin: 0 auto;
+  .btn-sns-facebook:first-child {
+    margin: 0;
+  }
+  .btn-sns-facebook {
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+  }
+  .btn-sns {
+    position: relative;
+  }
+  .btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+  .btn-sns-google {
+    margin: 16px 0 0;
+    background: #dc4e41;
+    color: #fff;
+  }
+  .btn-mail {
+    position: relative;
+    margin: 16px 0 0;
+    background: #eee;
+    color: #000;
+  }
+}
+
+.single-footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 250px;
+  padding: 40px 0;
+  text-align: center;
+  &__list {
+    font-size: 12px;
+    &__a-list {
+      display: inline-block;
+      margin: 0 0 0 16px;
+    }
+  }
+  .link-style {
+    color: #333;
+    display: block;
+  }
+  
+  .single-footer-logo {
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+  }
+  small {
+    font-size: 12px;
+  }
+}
+
+// ここから電話番号
+.single-container__header {
+  height: 128px;
+  &__logo-position {
+    margin: 40px 0 0;
+    display: inline-block;
+  }
+  &__progress-bar {
+    display: inline-block;
+    // vertical-align: top;
+    .progress-dots {
+      margin: 0;
+      width: 472px;
+      &__a-dot {
+        margin: 0 40px 0 0;
+        width: 72px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        min-width: 40px;
+        margin: 0 5% 0 0;
+        font-size: 12px;
+        color: #888;
+      }
+      &__a-dot:last-child {
+      margin: 0;
+      }
+      &__a-dot.through .progress-status {
+        background: #ea352d;
+      }
+      &__a-dot.active {
+        font-weight: 600;
+        color: #ea352d;
+      }
+      &__a-dot.active {
+        font-weight: 600;
+        color: #ea352d;
+      }
+      &__a-dot.active .progress-status {
+        background: #ea352d;
+      }
+    }
+  }
+}
+
+.signup-bar.progress-bar {
+  padding: 40px 0 0 44px;
+  border: 0;
+}
+
+.progress-status {
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.progress-status:after {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  content: '';
+  width: 99.5px;
+  height: 2px;
+  background: #ccc;
+}
+
+.progress-status-last {
+    width: 12px;
+    height: 12px;
+    margin: 8px auto 0;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.progress-status#aa:after {
+  background: #ea352d;
+}
+ 
+.progress-status-last#bb{
+    color: #ea352d;
+    background: #ea352d;
+}

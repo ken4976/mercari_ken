@@ -1,0 +1,83 @@
+<%= render "shared/header"%>
+
+<div class="l-container">
+
+<div class="l-content">
+  <section class="l-chapter-container">
+    <h2 class="l-chapter-head">住所変更</h2>
+
+      <div class="l-single-content">
+
+<%= form_for(@area) do |f| %>
+
+          <%= f.label :area, "都道府県" %>
+         <span class="form-require">必須</span>
+          <%= f.text_field :area, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+
+
+          <%= f.label :postal_code, "郵便番号" %>
+         <span class="form-require">必須</span>
+          <%= f.text_field :postal_code, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+
+
+          <%= f.label :city, "市区町村" %>
+         <span class="form-require">必須</span>
+          <%= f.text_field :city, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+
+
+          <%= f.label :address1, "番地" %>
+         <span class="form-require">必須</span>
+          <%= f.text_field :address1, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+
+
+          <%= f.label :address2, "建物名" %>
+         <span class="form-require">任意</span>
+          <%= f.text_field :address2, autofocus: true, class: 'input-default', placeholder: "例）メルカリ太郎" %>
+
+          <%= f.submit "登録する", class: "btn-default btn-red" %>
+
+<% end %>
+
+          </select>
+    <i class="fas fa-angle-down"></i>
+        </div>
+</div>
+
+<div class="form-group">
+  <label for="city">市区町村</label>
+  <span class="form-require">必須</span>
+  <input type="text" value="" name="city" placeholder="例）横浜市緑区" class="input-default">
+  </div>
+
+  <div class="form-group">
+  <label for="address1_label">番地</label>
+  <span class="form-require">必須</span>
+  <input type="text" value="" name="address1" placeholder="例）青山1−1−1" class="input-default">
+  </div>
+
+  <div class="form-group">
+  <label for="address2_label">建物名</label>
+  <span class="form-arbitrary">任意</span>
+  <input type="text" value="" name="address2" placeholder="例）柳ビル103" class="input-default">
+  </div>
+
+  <div class="form-group">
+    <label for="address2_label">電話</label>
+    <span class="form-arbitrary">任意</span>
+    <input type="number" value="" name="telephone" placeholder="例）09012345678" class="input-default">
+      </div>
+ -->
+      <!-- <input type="hidden" value="https://www.mercari.com/jp/mypage/deliver_address/" name="after_save_callback">
+      <button type="submit" class="btn-default btn-red">変更する</button> -->
+    </div>
+    <!-- </form> -->
+  </section>
+</div>
+
+
+<%= render "shared/sidebar" %>
+
+
+</div>
+
+<%= render "shared/seller-button" %>

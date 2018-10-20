@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charaset="UTF-8"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <title>Mercari</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="single-container">
+      <header class="single-container__header">
+        <h1>
+          <%= link_to "https://www.mercari.com/jp/" do %>
+            <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?249128278", :alt => "mercari" %>
+          <% end %>
+        </h1>
+      </header>
+
+      <main class="single-main">
+        <section class="single-main__l-single-container">
+          <h2 class="single-main__l-single-container__l-single-head">新規会員登録</h2>
+          <div class="single-main__l-single-container__l-single-inner">
+            <div class="l-single-content">
+
+              <button id="facebook-login" class="btn-default btn-sns btn-sns-facebook">
+                <i class="icon-facebook"></i>
+                <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, class: "post" %>
+              </button>
+              <button id="google-login" class="btn-default btn-sns btn-sns-google">
+                <i class="icon-google-plus"></i>
+                Googleで登録
+              </button>
+              <%= link_to "/users/sign_up", class: "btn-default btn-mail" do %>
+                <i class="icon-mail"></i>
+                メールアドレスで登録
+              <% end %>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="single-footer">
+        <nav>
+          <ul class="single-footer__lists clearfix">
+            <li class="single-footer__lists__a-list">
+              <%=link_to 'プライバシーポリシー',  "https://www.mercari.com/jp/privacy/", class: "link-style" %>
+            </li>
+            <li class="single-footer__lists__a-list">
+              <%=link_to 'メルカリ利用規約', "https://www.mercari.com/jp/tos/", class: "link-style"  %>
+            </li>
+            <li class="single-footer__lists__a-list">
+              <%= link_to '特定商取引に関する表記', "https://www.mercari.com/jp/tokutei/", class: "link-style" %>
+            </li>
+          </ul>
+        </nav>
+        <%= link_to "https://www.mercari.com/jp/", class: "single-footer-logo" do %>
+          <%= image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?249128278", :alt => "mercari", :width => "80", :height => "65" %>
+        <% end %>
+        <p>
+          <small>© 2018 Mercari</small>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
